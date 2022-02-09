@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HESAP" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e874ef0d-e5fb-4180-9f54-8733fb022376">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select h.tanim ,h.hesap_no ,coalesce (k.tanim,'') as hesap_kodu ,(case when h.aktif=true then 'Evet' else 'Hayır' end) aktif
+from muhsb.muh_hesap h left join muhsb.muh_kod k on k.kod_id =h.kod_id
+where h.tanim is not null]]>
+	</queryString>
+	<field name="tanim" class="java.lang.String"/>
+	<field name="hesap_no" class="java.lang.String"/>
+	<field name="hesap_kodu" class="java.lang.String"/>
+	<field name="aktif" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="199" y="0" width="168" height="20" uuid="6ab53ff4-ebd5-49c8-96d3-029d2d524025"/>
+				<textElement>
+					<font size="14" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[HESAP LİSTE RAPORU]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="11" width="178" height="20" uuid="144f51ab-6bfb-41cd-a085-aba48a396ff2"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Hesap Adı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="11" width="179" height="20" uuid="3dfd1028-d08b-407e-9bee-5b0575ad9e24"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Hesap No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="11" width="125" height="20" uuid="efada0b0-9850-4755-be6b-c3161e924a5d"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Hesap Kodu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="482" y="11" width="73" height="20" uuid="eab44bcf-5207-448b-81f5-71d90a46cfc2"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Aktif]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="178" height="20" isRemoveLineWhenBlank="true" uuid="354a3f9c-c30e-4f65-a07a-24588bbc15c9"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanim}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="0" width="179" height="20" uuid="d9cbbff9-7c62-43ba-9294-fb0a10dbca3f"/>
+				<box rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{hesap_no}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="357" y="0" width="125" height="20" uuid="5cfc7708-3e9e-457c-9326-9c3c562ddc6d"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hesap_kodu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="482" y="0" width="73" height="20" uuid="a7b07bfc-750d-4019-b464-b69cbef44184"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aktif}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

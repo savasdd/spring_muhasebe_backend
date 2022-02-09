@@ -1,0 +1,458 @@
+2021-12-26 22:01:55,756 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 19312 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:01:55,760 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:01:56,040 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 22:01:56,041 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 22:01:57,268 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:01:57,364 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 89 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:01:57,810 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@55dee154' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:01:57,815 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:01:58,664 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:01:58,679 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:01:58,680 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:01:58,801 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:01:58,802 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2760 ms
+2021-12-26 22:01:59,220 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:01:59,274 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-12-26 22:01:59,416 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-26 22:01:59,553 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-12-26 22:02:01,054 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-12-26 22:02:01,084 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:02:11,836 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:02:11,845 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:02:11,860 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 22:02:12,013 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:02:13,967 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 22:02:13,996 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16247ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@2a5e9023, org.springframework.security.web.header.HeaderWriterFilter@e5c66da, org.springframework.web.filter.CorsFilter@7f3c2d53, org.springframework.security.web.authentication.logout.LogoutFilter@b301474, muhasebe.security.TokenFilter@2ee47df7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3598dbf4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@476347a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cb88f07, org.springframework.security.web.session.SessionManagementFilter@50a2ced9, org.springframework.security.web.access.ExceptionTranslationFilter@4dd0ba3e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25b9d285]
+2021-12-26 22:02:14,129 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:02:14,757 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 22:02:14,777 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 19.539 seconds (JVM running for 20.451)
+2021-12-26 22:03:12,550 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 12760 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:03:12,554 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:03:12,971 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 22:03:12,972 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 22:03:14,272 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:03:14,393 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 111 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:03:14,833 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@ffd87f9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:03:14,837 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:03:15,577 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:03:15,589 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:03:15,589 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:03:15,697 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:03:15,698 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2725 ms
+2021-12-26 22:03:16,068 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:03:16,129 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-12-26 22:03:16,279 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-26 22:03:16,404 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-12-26 22:03:17,620 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-12-26 22:03:17,636 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:03:23,317 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:03:23,328 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:03:23,347 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 22:03:23,524 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:03:25,565 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 22:03:25,600 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5aef38da, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c9ceb07, org.springframework.security.web.header.HeaderWriterFilter@54132269, org.springframework.web.filter.CorsFilter@71212359, org.springframework.security.web.authentication.logout.LogoutFilter@4f5f921c, muhasebe.security.TokenFilter@39d8f0e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16d23291, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38a48d34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cf47c18, org.springframework.security.web.session.SessionManagementFilter@28d2f97b, org.springframework.security.web.access.ExceptionTranslationFilter@539428df, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26a70e98]
+2021-12-26 22:03:25,795 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:03:26,435 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 22:03:26,451 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 14.462 seconds (JVM running for 15.088)
+
+***2021-12-26 22:04:46,469 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8085-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-26 22:04:46,470 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-12-26 22:04:46,473 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-1] Completed initialization in 3 ms
+2021-12-26 22:04:47,098 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8085-exec-2] Resolved [org.springframework.security.authentication.InternalAuthenticationServiceException: 404 NOT_FOUND "Kullanıcı Bulunmadı!"]
+2021-12-26 22:10:34,277 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 14896 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:10:34,281 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:10:34,554 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 22:10:34,555 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 22:10:35,756 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:10:35,848 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 86 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:10:36,304 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@48660cec' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:10:36,309 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:10:37,108 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:10:37,120 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:10:37,120 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:10:37,242 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:10:37,242 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2686 ms
+2021-12-26 22:10:37,628 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:10:37,687 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-12-26 22:10:37,862 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-26 22:10:37,981 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-12-26 22:10:39,091 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-12-26 22:10:39,106 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:10:47,558 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:10:47,568 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:10:47,590 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 22:10:47,777 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:10:49,827 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 22:10:49,854 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52cac3f4, org.springframework.security.web.context.SecurityContextPersistenceFilter@37078941, org.springframework.security.web.header.HeaderWriterFilter@628cc52d, org.springframework.web.filter.CorsFilter@105e323d, org.springframework.security.web.authentication.logout.LogoutFilter@324cabfa, muhasebe.security.TokenFilter@644f241c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b542591, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4771c34b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74a0c204, org.springframework.security.web.session.SessionManagementFilter@3c9263b2, org.springframework.security.web.access.ExceptionTranslationFilter@7c900de9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c9ab008]
+2021-12-26 22:10:49,963 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:10:50,565 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 22:10:50,580 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 16.796 seconds (JVM running for 17.403)
+2021-12-26 22:14:18,234 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:14:18,242 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:14:18,246 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2021-12-26 22:14:18,251 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2021-12-26 22:14:18,358 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 14896 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:14:18,358 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:14:18,809 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:14:18,870 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 59 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:14:18,959 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@57bee74c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:14:18,960 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:14:19,024 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:14:19,025 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:14:19,025 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:14:19,067 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:14:19,067 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 706 ms
+2021-12-26 22:14:19,162 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:14:19,168 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2021-12-26 22:14:28,701 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2021-12-26 22:14:28,703 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:14:45,968 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:14:45,969 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:14:45,974 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 22:14:46,015 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:14:46,879 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 22:14:46,891 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6014f8f4, org.springframework.security.web.context.SecurityContextPersistenceFilter@45b38d21, org.springframework.security.web.header.HeaderWriterFilter@1ac7bd94, org.springframework.web.filter.CorsFilter@498e23b0, org.springframework.security.web.authentication.logout.LogoutFilter@56cdc517, muhasebe.security.TokenFilter@66b025c5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58ab63c5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f274e59, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4eead133, org.springframework.security.web.session.SessionManagementFilter@7780f324, org.springframework.security.web.access.ExceptionTranslationFilter@7adceb31, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1685aa23]
+2021-12-26 22:14:46,921 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:14:47,044 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 22:14:47,053 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 28.734 seconds (JVM running for 253.876)
+2021-12-26 22:14:47,057 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-12-26 22:15:23,856 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-9] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:15:23,859 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-9] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:15:23,861 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-2 - Shutdown initiated...
+2021-12-26 22:15:23,864 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-2 - Shutdown completed.
+2021-12-26 22:15:23,945 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 14896 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:15:23,946 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:15:24,324 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:15:24,384 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 59 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:15:24,465 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d9c0be3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:15:24,467 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:15:24,526 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:15:24,527 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:15:24,527 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:15:24,569 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:15:24,569 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 621 ms
+2021-12-26 22:15:24,648 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:15:24,655 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2021-12-26 22:15:25,722 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2021-12-26 22:15:25,723 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:15:32,241 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:15:32,242 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:15:32,250 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 22:15:32,282 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:15:32,969 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 22:15:32,977 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1386483f, org.springframework.security.web.context.SecurityContextPersistenceFilter@39ccf94c, org.springframework.security.web.header.HeaderWriterFilter@71b4a658, org.springframework.web.filter.CorsFilter@4865872c, org.springframework.security.web.authentication.logout.LogoutFilter@4c2ed98c, muhasebe.security.TokenFilter@31af355c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75c657e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2194b964, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a0624e0, org.springframework.security.web.session.SessionManagementFilter@d670f9, org.springframework.security.web.access.ExceptionTranslationFilter@253d2f78, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15c5114a]
+2021-12-26 22:15:33,018 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:15:33,125 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 22:15:33,133 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 9.216 seconds (JVM running for 299.956)
+2021-12-26 22:15:33,135 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-12-26 22:15:40,472 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8085-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-26 22:15:40,474 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-12-26 22:15:40,475 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-1] Completed initialization in 1 ms
+2021-12-26 22:15:41,016 INFO muhasebe.auth.AuthController [http-nio-8085-exec-1] Generate Token For: muh
+2021-12-26 22:18:03,984 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-15] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:18:03,986 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-15] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:18:03,987 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-3 - Shutdown initiated...
+2021-12-26 22:18:03,991 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-3 - Shutdown completed.
+2021-12-26 22:18:04,080 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 14896 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:18:04,081 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:18:04,495 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:18:04,551 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 55 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:18:04,624 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4367a433' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:18:04,626 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:18:04,686 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:18:04,687 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:18:04,687 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:18:04,728 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:18:04,729 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 647 ms
+2021-12-26 22:18:04,829 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:18:04,840 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2021-12-26 22:18:06,812 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2021-12-26 22:18:06,814 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:18:24,185 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:18:24,186 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:18:24,194 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 22:18:24,235 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:18:25,005 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 22:18:25,017 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17e2ac54, org.springframework.security.web.context.SecurityContextPersistenceFilter@21c6a48a, org.springframework.security.web.header.HeaderWriterFilter@14dd4d2e, org.springframework.web.filter.CorsFilter@32693028, org.springframework.security.web.authentication.logout.LogoutFilter@4efb8fe, muhasebe.security.TokenFilter@47240355, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d21efd1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36b6966, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58c569fe, org.springframework.security.web.session.SessionManagementFilter@1540c42c, org.springframework.security.web.access.ExceptionTranslationFilter@26df4c97, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c7eb537]
+2021-12-26 22:18:25,045 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:18:25,160 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 22:18:25,172 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 21.117 seconds (JVM running for 471.995)
+2021-12-26 22:18:25,175 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-12-26 22:18:45,468 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-21] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:18:45,470 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-21] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:18:45,470 INFO com.zaxxer.hikari.HikariDataSource [Thread-21] HikariPool-4 - Shutdown initiated...
+2021-12-26 22:18:45,473 INFO com.zaxxer.hikari.HikariDataSource [Thread-21] HikariPool-4 - Shutdown completed.
+2021-12-26 22:18:45,562 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 14896 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:18:45,563 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:18:45,941 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:18:45,993 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 50 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:18:46,046 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@38a6d20a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:18:46,048 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:18:46,090 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:18:46,091 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:18:46,091 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:18:46,127 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:18:46,127 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 563 ms
+2021-12-26 22:18:46,190 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:18:46,198 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
+2021-12-26 22:18:51,142 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
+2021-12-26 22:18:51,144 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:19:13,994 WARN com.zaxxer.hikari.pool.ProxyConnection [restartedMain] HikariPool-5 - Connection org.postgresql.jdbc.PgConnection@6d01cb7 marked as broken because of SQLSTATE(08006), ErrorCode(0)
+org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:350)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.executeQuery(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:42)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:769)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at muhasebe.MuhasebeProjesiApplication.main(MuhasebeProjesiApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:161)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:128)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:113)
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:73)
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:443)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2057)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	... 47 common frames omitted
+2021-12-26 22:19:13,996 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] SQL Error: 0, SQLState: 08006
+2021-12-26 22:19:13,997 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] An I/O error occurred while sending to the backend.
+2021-12-26 22:19:13,999 ERROR org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to build DatabaseInformation
+2021-12-26 22:19:13,999 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to build DatabaseInformation
+2021-12-26 22:19:13,999 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Shutdown initiated...
+2021-12-26 22:19:14,950 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Shutdown completed.
+2021-12-26 22:19:14,952 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2021-12-26 22:19:14,964 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-26 22:19:14,984 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to build DatabaseInformation
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:769)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at muhasebe.MuhasebeProjesiApplication.main(MuhasebeProjesiApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to build DatabaseInformation
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 22 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to build DatabaseInformation
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:112)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:163)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 26 common frames omitted
+Caused by: org.postgresql.util.PSQLException: An I/O error occurred while sending to the backend.
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:350)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:481)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:401)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:322)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:308)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:284)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:236)
+	at com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:111)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.executeQuery(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:42)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59)
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155)
+	... 35 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:161)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:128)
+	at org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:113)
+	at org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:73)
+	at org.postgresql.core.PGStream.receiveChar(PGStream.java:443)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2057)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:323)
+	... 47 common frames omitted
+2021-12-26 22:19:37,918 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 8516 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:19:37,923 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:19:38,225 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 22:19:38,225 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 22:19:39,605 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:19:39,716 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 103 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:19:40,187 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@15f72201' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:19:40,191 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:19:41,093 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:19:41,106 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:19:41,107 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:19:41,234 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:19:41,235 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3009 ms
+2021-12-26 22:19:41,617 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:19:41,672 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-12-26 22:19:41,813 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-26 22:19:41,937 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-12-26 22:19:43,658 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-12-26 22:19:43,687 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:19:50,118 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:19:50,128 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:19:50,147 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 22:19:50,289 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:19:52,275 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 22:19:52,306 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f3d0f95, org.springframework.security.web.context.SecurityContextPersistenceFilter@4453370e, org.springframework.security.web.header.HeaderWriterFilter@2154e762, org.springframework.web.filter.CorsFilter@81d120a, org.springframework.security.web.authentication.logout.LogoutFilter@589b49e5, muhasebe.security.TokenFilter@793dc14e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11bead93, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56e9070d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55ab0c3b, org.springframework.security.web.session.SessionManagementFilter@19318b32, org.springframework.security.web.access.ExceptionTranslationFilter@32f8e2ec, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3fa24f2d]
+2021-12-26 22:19:52,416 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:19:53,026 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 22:19:53,042 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 15.647 seconds (JVM running for 16.337)
+2021-12-26 22:25:29,105 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-5] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:25:29,113 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-5] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:25:29,116 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown initiated...
+2021-12-26 22:25:29,121 INFO com.zaxxer.hikari.HikariDataSource [Thread-5] HikariPool-1 - Shutdown completed.
+2021-12-26 22:25:29,235 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 8516 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:25:29,236 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:25:29,695 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:25:29,756 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 60 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:25:29,856 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5ef20683' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:25:29,857 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:25:29,922 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:25:29,923 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:25:29,924 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:25:29,960 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:25:29,961 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 721 ms
+2021-12-26 22:25:30,049 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:25:30,058 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2021-12-26 22:25:30,860 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2021-12-26 22:25:30,862 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:25:36,895 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:25:36,896 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:25:36,902 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 22:25:36,942 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:25:37,742 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 22:25:37,757 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12a61e6d, org.springframework.security.web.context.SecurityContextPersistenceFilter@302149a3, org.springframework.security.web.header.HeaderWriterFilter@77dcc166, org.springframework.web.filter.CorsFilter@67dacd7c, org.springframework.security.web.authentication.logout.LogoutFilter@488dc32d, muhasebe.security.TokenFilter@6db1f255, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70b35c52, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@617564d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c6a4460, org.springframework.security.web.session.SessionManagementFilter@2d17d55c, org.springframework.security.web.access.ExceptionTranslationFilter@1f5bf124, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ace8791]
+2021-12-26 22:25:37,803 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:25:37,933 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 22:25:37,944 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 8.749 seconds (JVM running for 361.238)
+2021-12-26 22:25:37,948 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-12-26 22:25:42,736 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-9] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:25:42,739 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-9] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:25:42,740 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-2 - Shutdown initiated...
+2021-12-26 22:25:42,743 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-2 - Shutdown completed.
+2021-12-26 22:25:42,838 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 8516 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 22:25:42,839 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 22:25:43,214 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:25:43,268 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 53 ms. Found 7 JPA repository interfaces.
+2021-12-26 22:25:43,328 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5ea0bc51' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:25:43,329 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 22:25:43,382 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 22:25:43,383 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 22:25:43,383 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 22:25:43,416 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 22:25:43,417 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 573 ms
+2021-12-26 22:25:43,494 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:25:43,501 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2021-12-26 22:25:44,178 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2021-12-26 22:25:44,180 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 22:25:50,347 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:25:50,348 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:25:50,356 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 22:25:50,395 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:25:51,024 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 22:25:51,032 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1deb5bab, org.springframework.security.web.context.SecurityContextPersistenceFilter@52776de2, org.springframework.security.web.header.HeaderWriterFilter@2dfe99ae, org.springframework.web.filter.CorsFilter@48da09d0, org.springframework.security.web.authentication.logout.LogoutFilter@2875b720, muhasebe.security.TokenFilter@41859882, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16365a02, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f5c9283, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23ab9d94, org.springframework.security.web.session.SessionManagementFilter@666d1770, org.springframework.security.web.access.ExceptionTranslationFilter@6cc50816, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43857747]
+2021-12-26 22:25:51,067 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 22:25:51,157 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 22:25:51,164 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 8.368 seconds (JVM running for 374.459)
+2021-12-26 22:25:51,167 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2021-12-26 23:36:53,954 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MuhasebeProjesiApplication using Java 11.0.2 on IKM with PID 3196 (C:\Projeler\muhasebe\backend\MuhasebeProjesi\target\classes started by IKM in C:\Projeler\muhasebe\backend\MuhasebeProjesi)
+2021-12-26 23:36:53,960 INFO org.springframework.boot.SpringApplication [restartedMain] The following profiles are active: dev
+2021-12-26 23:36:54,268 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 23:36:54,268 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 23:36:55,562 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 23:36:55,677 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 106 ms. Found 7 JPA repository interfaces.
+2021-12-26 23:36:56,184 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5c2d59c8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 23:36:56,191 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-12-26 23:36:57,177 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8085 (http)
+2021-12-26 23:36:57,193 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-12-26 23:36:57,194 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-12-26 23:36:57,335 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-12-26 23:36:57,336 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3066 ms
+2021-12-26 23:36:57,761 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 23:36:57,848 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-12-26 23:36:58,049 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-26 23:36:58,189 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2021-12-26 23:36:58,962 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2021-12-26 23:36:59,000 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: muhasebe.util.PostgreSqlDialect
+2021-12-26 23:37:05,935 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 23:37:05,945 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 23:37:05,964 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2021-12-26 23:37:06,129 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 23:37:08,832 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-26 23:37:08,867 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75b1300f, org.springframework.security.web.context.SecurityContextPersistenceFilter@452f942, org.springframework.security.web.header.HeaderWriterFilter@7c58e96e, org.springframework.web.filter.CorsFilter@54fe50e0, org.springframework.security.web.authentication.logout.LogoutFilter@3326ad7c, muhasebe.security.TokenFilter@24d55bf2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@102c7d4c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7abb6285, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3308be81, org.springframework.security.web.session.SessionManagementFilter@41b07dc7, org.springframework.security.web.access.ExceptionTranslationFilter@610e3c4f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a326552]
+2021-12-26 23:37:08,983 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-26 23:37:09,618 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8085 (http) with context path ''
+2021-12-26 23:37:09,634 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MuhasebeProjesiApplication in 16.253 seconds (JVM running for 16.985)

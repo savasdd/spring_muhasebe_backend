@@ -1,0 +1,564 @@
+2022-01-23 00:21:23,826 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8085-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-23 00:21:23,835 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-01-23 00:21:23,837 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8085-exec-1] Completed initialization in 2 ms
+2022-01-23 00:21:30,469 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-4] request [POST http://localhost:9200/kullanicilog/_doc?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."]
+2022-01-23 00:21:30,488 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-4] request [POST http://localhost:9200/kullanicilog/_refresh?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:21:30,491 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-4] Create Kullanici Log!
+2022-01-23 00:21:35,058 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-6] Creating CriteriaQuery for ComparisonNode: kullaniciId!='null'
+2022-01-23 00:21:35,060 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-6] Creating Predicate for ComparisonNode: kullaniciId!='null'
+2022-01-23 00:21:35,063 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Creating Predicate for comparison node: kullaniciId!='null'
+2022-01-23 00:21:35,064 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Property graph path : kullaniciId
+2022-01-23 00:21:35,065 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Create property path for type muhasebe.model.MuhKullanici property kullaniciId.
+2022-01-23 00:21:35,066 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Cast all arguments to type java.lang.String.
+2022-01-23 00:21:35,068 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-6] Parsing argument 'null' as type String, thread http-nio-8085-exec-6
+2022-01-23 00:21:35,069 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Creating predicate: propertyPath != [null]
+2022-01-23 00:21:35,212 INFO muhasebe.custom.impl.MuhKullaniciServiceImpl [http-nio-8085-exec-6] MuhHesap Size: 4
+2022-01-23 00:21:40,017 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-8] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:21:40,018 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-8] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:21:40,018 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:21:40,019 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Property graph path : kiraciId
+2022-01-23 00:21:40,020 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:21:40,020 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Cast all arguments to type java.lang.String.
+2022-01-23 00:21:40,021 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-8] Parsing argument 'null' as type String, thread http-nio-8085-exec-8
+2022-01-23 00:21:40,021 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Creating predicate: propertyPath != [null]
+2022-01-23 00:21:40,231 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-8] MuhKiraci Size: 3
+2022-01-23 00:21:47,230 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-10] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:21:47,231 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-10] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:21:47,232 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:21:47,232 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Property graph path : kiraciId
+2022-01-23 00:21:47,233 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:21:47,233 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Cast all arguments to type java.lang.String.
+2022-01-23 00:21:47,234 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-10] Parsing argument 'null' as type String, thread http-nio-8085-exec-10
+2022-01-23 00:21:47,234 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating predicate: propertyPath != [null]
+2022-01-23 00:21:47,419 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-10] MuhKiraci Size: 3
+2022-01-23 00:21:50,519 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-1] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:21:50,521 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-1] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:21:50,522 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:21:50,523 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Property graph path : kiraciId
+2022-01-23 00:21:50,524 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:21:50,524 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Cast all arguments to type java.lang.String.
+2022-01-23 00:21:50,525 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-1] Parsing argument 'null' as type String, thread http-nio-8085-exec-1
+2022-01-23 00:21:50,526 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Creating predicate: propertyPath != [null]
+2022-01-23 00:21:50,705 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-1] MuhKiraci Size: 3
+2022-01-23 00:21:52,041 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-3] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:21:52,042 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-3] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:21:52,043 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:21:52,044 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Property graph path : kiraci.kiraciId
+2022-01-23 00:21:52,046 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:21:52,074 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:21:52,074 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Cast all arguments to type java.lang.String.
+2022-01-23 00:21:52,075 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-3] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-3
+2022-01-23 00:21:52,076 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:21:52,398 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-3] MuhHesap Size: 3
+2022-01-23 00:21:58,183 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-4] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:21:58,184 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-4] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:21:58,184 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:21:58,185 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Property graph path : kiraciId
+2022-01-23 00:21:58,185 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:21:58,185 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Cast all arguments to type java.lang.String.
+2022-01-23 00:21:58,185 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-4] Parsing argument 'null' as type String, thread http-nio-8085-exec-4
+2022-01-23 00:21:58,186 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating predicate: propertyPath != [null]
+2022-01-23 00:21:58,363 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-4] MuhKiraci Size: 3
+2022-01-23 00:22:01,600 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-5] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:22:01,601 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-5] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:22:01,601 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:22:01,602 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Property graph path : kiraci.kiraciId
+2022-01-23 00:22:01,602 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:22:01,603 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:22:01,603 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Cast all arguments to type java.lang.String.
+2022-01-23 00:22:01,604 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-5] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-5
+2022-01-23 00:22:01,605 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:22:01,885 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-5] MuhHesap Size: 3
+2022-01-23 00:22:11,955 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-7] request [POST http://localhost:9200/hatalog/_doc?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."]
+2022-01-23 00:22:11,974 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-7] request [POST http://localhost:9200/hatalog/_refresh?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:22:11,974 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-7] Create Hata Log!
+2022-01-23 00:22:11,978 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8085-exec-7] Resolved [cz.jirutka.rsql.parser.RSQLParserException: cz.jirutka.rsql.parser.ParseException: Encountered "<EOF>" at line 1, column 17.
+Was expecting one of:
+    <UNRESERVED_STR> ...
+    <SINGLE_QUOTED_STR> ...
+    <DOUBLE_QUOTED_STR> ...
+    "(" ...
+    ]
+2022-01-23 00:27:07,865 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-9] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:27:07,866 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-9] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:27:07,866 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:27:07,867 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Property graph path : kiraciId
+2022-01-23 00:27:07,867 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:27:07,868 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Cast all arguments to type java.lang.String.
+2022-01-23 00:27:07,868 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-9] Parsing argument 'null' as type String, thread http-nio-8085-exec-9
+2022-01-23 00:27:07,869 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating predicate: propertyPath != [null]
+2022-01-23 00:27:07,883 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-10] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:27:08,159 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-9] MuhKiraci Size: 3
+2022-01-23 00:27:09,551 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-1] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:27:22,586 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-5] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:27:22,586 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-4] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:27:22,587 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-4] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:27:22,588 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:27:22,588 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Property graph path : kiraciId
+2022-01-23 00:27:22,589 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:27:22,590 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Cast all arguments to type java.lang.String.
+2022-01-23 00:27:22,590 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-4] Parsing argument 'null' as type String, thread http-nio-8085-exec-4
+2022-01-23 00:27:22,590 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating predicate: propertyPath != [null]
+2022-01-23 00:27:22,933 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-4] MuhKiraci Size: 3
+2022-01-23 00:27:23,890 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-6] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:27:29,533 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-9] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:27:29,533 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-10] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:27:29,534 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-10] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:27:29,535 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:27:29,535 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Property graph path : kiraciId
+2022-01-23 00:27:29,536 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:27:29,536 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Cast all arguments to type java.lang.String.
+2022-01-23 00:27:29,537 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-10] Parsing argument 'null' as type String, thread http-nio-8085-exec-10
+2022-01-23 00:27:29,537 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating predicate: propertyPath != [null]
+2022-01-23 00:27:29,869 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-10] MuhKiraci Size: 3
+2022-01-23 00:27:31,425 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-1] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:28:47,527 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-4] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:28:47,524 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-5] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:28:47,533 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-5] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:28:47,535 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:28:47,537 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Property graph path : kiraciId
+2022-01-23 00:28:47,538 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:28:47,540 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Cast all arguments to type java.lang.String.
+2022-01-23 00:28:47,541 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-5] Parsing argument 'null' as type String, thread http-nio-8085-exec-5
+2022-01-23 00:28:47,542 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating predicate: propertyPath != [null]
+2022-01-23 00:28:47,872 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-5] MuhKiraci Size: 3
+2022-01-23 00:28:56,676 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-6] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:29:02,123 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-7] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:29:02,441 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-9] Lock MuhKiraci! 
+2022-01-23 00:29:02,524 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-9] KIRACI: =====> 83ab9dcb-c14b-4e64-b15c-57561ccd8dcb güncellendi!
+2022-01-23 00:29:02,797 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-9] request [POST http://localhost:9200/islemlog/_doc?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."]
+2022-01-23 00:29:02,815 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-9] request [POST http://localhost:9200/islemlog/_refresh?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:29:02,816 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-9] Create Islem Log!
+2022-01-23 00:29:03,081 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-10] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:29:03,149 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-1] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:29:05,856 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-2] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:29:05,857 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-3] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:29:05,858 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-3] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:29:05,859 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:29:05,860 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Property graph path : kiraciId
+2022-01-23 00:29:05,860 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:29:05,862 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Cast all arguments to type java.lang.String.
+2022-01-23 00:29:05,863 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-3] Parsing argument 'null' as type String, thread http-nio-8085-exec-3
+2022-01-23 00:29:05,864 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating predicate: propertyPath != [null]
+2022-01-23 00:29:06,196 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-3] MuhKiraci Size: 3
+2022-01-23 00:29:39,016 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-5] request [POST http://localhost:9200/islemlog/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:29:39,027 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-5] request [POST http://localhost:9200/islemlog/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:29:39,063 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-5] Log Islem Size: 18
+2022-01-23 00:30:53,886 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-7] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:30:53,887 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-7] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:30:53,887 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:30:53,888 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Property graph path : kiraciId
+2022-01-23 00:30:53,888 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:30:53,888 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Cast all arguments to type java.lang.String.
+2022-01-23 00:30:53,889 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-7] Parsing argument 'null' as type String, thread http-nio-8085-exec-7
+2022-01-23 00:30:53,889 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Creating predicate: propertyPath != [null]
+2022-01-23 00:30:54,071 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-7] MuhKiraci Size: 3
+2022-01-23 00:30:57,813 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-9] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:01,462 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-1] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:01,684 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-2] Lock MuhKiraci! 
+2022-01-23 00:31:01,808 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-2] KIRACI: =====> 766aca32-7d85-4cec-a4d5-f932f52d95a4 güncellendi!
+2022-01-23 00:31:01,996 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-2] request [POST http://localhost:9200/islemlog/_doc?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."]
+2022-01-23 00:31:02,025 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-2] request [POST http://localhost:9200/islemlog/_refresh?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:31:02,026 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-2] Create Islem Log!
+2022-01-23 00:31:02,241 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-3] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:02,331 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-4] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:03,221 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-6] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:03,222 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-5] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:31:03,223 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-5] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:31:03,224 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:31:03,225 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Property graph path : kiraciId
+2022-01-23 00:31:03,226 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:31:03,227 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Cast all arguments to type java.lang.String.
+2022-01-23 00:31:03,227 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-5] Parsing argument 'null' as type String, thread http-nio-8085-exec-5
+2022-01-23 00:31:03,228 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating predicate: propertyPath != [null]
+2022-01-23 00:31:03,559 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-5] MuhKiraci Size: 3
+2022-01-23 00:31:07,179 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-8] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:11,211 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-9] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:11,439 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-10] Lock MuhKiraci! 
+2022-01-23 00:31:11,564 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-10] KIRACI: =====> c96a6bea-8540-42b8-b187-7fcaa669516f güncellendi!
+2022-01-23 00:31:11,598 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-10] request [POST http://localhost:9200/islemlog/_doc?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."]
+2022-01-23 00:31:11,641 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-10] request [POST http://localhost:9200/islemlog/_refresh?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:31:11,643 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-10] Create Islem Log!
+2022-01-23 00:31:11,930 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-1] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:11,991 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-2] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:12,871 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-4] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:12,874 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-3] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:31:12,875 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-3] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:31:12,876 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:31:12,877 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Property graph path : kiraciId
+2022-01-23 00:31:12,878 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:31:12,878 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Cast all arguments to type java.lang.String.
+2022-01-23 00:31:12,879 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-3] Parsing argument 'null' as type String, thread http-nio-8085-exec-3
+2022-01-23 00:31:12,879 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating predicate: propertyPath != [null]
+2022-01-23 00:31:13,266 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-3] MuhKiraci Size: 3
+2022-01-23 00:31:44,060 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-8] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:50,555 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-9] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:50,781 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-7] Lock MuhKiraci! 
+2022-01-23 00:31:50,909 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-7] KIRACI: =====> 766aca32-7d85-4cec-a4d5-f932f52d95a4 güncellendi!
+2022-01-23 00:31:50,972 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-7] request [POST http://localhost:9200/islemlog/_doc?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."]
+2022-01-23 00:31:51,043 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-7] request [POST http://localhost:9200/islemlog/_refresh?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:31:51,048 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-7] Create Islem Log!
+2022-01-23 00:31:51,292 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-1] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:31:51,371 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-2] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:32:11,385 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-6] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:32:11,385 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-5] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:32:11,387 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-5] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:32:11,387 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:32:11,387 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Property graph path : kiraciId
+2022-01-23 00:32:11,389 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:32:11,389 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Cast all arguments to type java.lang.String.
+2022-01-23 00:32:11,391 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-5] Parsing argument 'null' as type String, thread http-nio-8085-exec-5
+2022-01-23 00:32:11,391 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating predicate: propertyPath != [null]
+2022-01-23 00:32:11,771 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-5] MuhKiraci Size: 3
+2022-01-23 00:32:12,571 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-9] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:32:12,576 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-10] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='c96a6bea-8540-42b8-b187-7fcaa669516f'
+2022-01-23 00:32:12,578 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-10] Creating Predicate for ComparisonNode: kiraci.kiraciId=='c96a6bea-8540-42b8-b187-7fcaa669516f'
+2022-01-23 00:32:12,578 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating Predicate for comparison node: kiraci.kiraciId=='c96a6bea-8540-42b8-b187-7fcaa669516f'
+2022-01-23 00:32:12,579 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Property graph path : kiraci.kiraciId
+2022-01-23 00:32:12,580 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:32:12,581 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:32:12,582 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Cast all arguments to type java.lang.String.
+2022-01-23 00:32:12,583 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-10] Parsing argument 'c96a6bea-8540-42b8-b187-7fcaa669516f' as type String, thread http-nio-8085-exec-10
+2022-01-23 00:32:12,584 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating predicate: propertyPath == [c96a6bea-8540-42b8-b187-7fcaa669516f]
+2022-01-23 00:32:12,956 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-10] MuhHesap Size: 1
+2022-01-23 00:36:11,877 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-2] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:36:11,878 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-2] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:36:11,878 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:36:11,879 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Property graph path : kiraciId
+2022-01-23 00:36:11,879 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:36:11,880 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Cast all arguments to type java.lang.String.
+2022-01-23 00:36:11,881 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-2] Parsing argument 'null' as type String, thread http-nio-8085-exec-2
+2022-01-23 00:36:11,881 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Creating predicate: propertyPath != [null]
+2022-01-23 00:36:12,101 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-2] MuhKiraci Size: 3
+2022-01-23 00:37:46,825 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-4] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:37:46,826 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-4] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:37:46,826 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:37:46,827 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Property graph path : kiraciId
+2022-01-23 00:37:46,828 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:37:46,829 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Cast all arguments to type java.lang.String.
+2022-01-23 00:37:46,829 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-4] Parsing argument 'null' as type String, thread http-nio-8085-exec-4
+2022-01-23 00:37:46,830 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating predicate: propertyPath != [null]
+2022-01-23 00:37:47,072 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-4] MuhKiraci Size: 3
+2022-01-23 00:38:18,872 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-5] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:38:18,873 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-5] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:38:18,873 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:38:18,874 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Property graph path : kiraciId
+2022-01-23 00:38:18,874 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:38:18,875 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Cast all arguments to type java.lang.String.
+2022-01-23 00:38:18,875 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-5] Parsing argument 'null' as type String, thread http-nio-8085-exec-5
+2022-01-23 00:38:18,876 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating predicate: propertyPath != [null]
+2022-01-23 00:38:19,114 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-5] MuhKiraci Size: 3
+2022-01-23 00:43:39,124 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-9] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:43:39,125 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-10] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:43:39,126 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-10] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:43:39,127 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:43:39,127 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Property graph path : kiraci.kiraciId
+2022-01-23 00:43:39,128 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:43:39,129 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:43:39,130 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Cast all arguments to type java.lang.String.
+2022-01-23 00:43:39,131 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-10] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-10
+2022-01-23 00:43:39,132 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:43:39,588 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-10] MuhHesap Size: 3
+2022-01-23 00:45:23,795 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-3] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:45:23,802 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-2] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:45:23,803 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-2] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:45:23,804 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:45:23,805 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Property graph path : kiraci.kiraciId
+2022-01-23 00:45:23,806 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:45:23,807 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:45:23,808 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Cast all arguments to type java.lang.String.
+2022-01-23 00:45:23,808 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-2] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-2
+2022-01-23 00:45:23,809 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:45:24,235 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-2] MuhHesap Size: 3
+2022-01-23 00:45:24,476 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-6] request [POST http://localhost:9200/hatalog/_doc?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."]
+2022-01-23 00:45:24,494 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-6] request [POST http://localhost:9200/hatalog/_refresh?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:45:24,496 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-6] Create Hata Log!
+2022-01-23 00:45:24,498 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8085-exec-6] Resolved [cz.jirutka.rsql.parser.RSQLParserException: cz.jirutka.rsql.parser.ParseException: Encountered "<EOF>" at line 1, column 4.
+Was expecting one of:
+    <COMP_FIQL> ...
+    <COMP_ALT> ...
+    ]
+2022-01-23 00:46:04,515 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-5] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:46:04,518 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-5] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:46:04,519 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:46:04,519 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Property graph path : kiraciId
+2022-01-23 00:46:04,520 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:46:04,520 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Cast all arguments to type java.lang.String.
+2022-01-23 00:46:04,521 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-5] Parsing argument 'null' as type String, thread http-nio-8085-exec-5
+2022-01-23 00:46:04,521 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating predicate: propertyPath != [null]
+2022-01-23 00:46:04,741 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-5] MuhKiraci Size: 3
+2022-01-23 00:46:06,353 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-8] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:46:06,355 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-9] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:46:06,356 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-9] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:46:06,357 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:46:06,357 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Property graph path : kiraci.kiraciId
+2022-01-23 00:46:06,358 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:46:06,358 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:46:06,359 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Cast all arguments to type java.lang.String.
+2022-01-23 00:46:06,360 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-9] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-9
+2022-01-23 00:46:06,360 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:46:06,789 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-9] MuhHesap Size: 3
+2022-01-23 00:46:14,823 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-1] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:46:14,824 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-3] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:46:14,825 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-3] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:46:14,826 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:46:14,826 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Property graph path : kiraci.kiraciId
+2022-01-23 00:46:14,827 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:46:14,828 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:46:14,829 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Cast all arguments to type java.lang.String.
+2022-01-23 00:46:14,829 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-3] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-3
+2022-01-23 00:46:14,830 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:46:15,248 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-3] MuhHesap Size: 3
+2022-01-23 00:46:32,891 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-4] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:46:32,892 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-4] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:46:32,893 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:46:32,894 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Property graph path : kiraciId
+2022-01-23 00:46:32,894 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:46:32,895 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Cast all arguments to type java.lang.String.
+2022-01-23 00:46:32,895 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-4] Parsing argument 'null' as type String, thread http-nio-8085-exec-4
+2022-01-23 00:46:32,896 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating predicate: propertyPath != [null]
+2022-01-23 00:46:33,116 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-4] MuhKiraci Size: 3
+2022-01-23 00:46:44,858 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-6] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:46:44,859 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-6] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:46:44,860 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:46:44,861 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Property graph path : kiraciId
+2022-01-23 00:46:44,862 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:46:44,862 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Cast all arguments to type java.lang.String.
+2022-01-23 00:46:44,863 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-6] Parsing argument 'null' as type String, thread http-nio-8085-exec-6
+2022-01-23 00:46:44,865 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-6] Creating predicate: propertyPath != [null]
+2022-01-23 00:46:45,086 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-6] MuhKiraci Size: 3
+2022-01-23 00:46:55,845 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-5] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:46:55,846 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-5] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:46:55,847 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:46:55,847 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Property graph path : kiraciId
+2022-01-23 00:46:55,847 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:46:55,848 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Cast all arguments to type java.lang.String.
+2022-01-23 00:46:55,848 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-5] Parsing argument 'null' as type String, thread http-nio-8085-exec-5
+2022-01-23 00:46:55,849 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating predicate: propertyPath != [null]
+2022-01-23 00:46:56,069 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-5] MuhKiraci Size: 3
+2022-01-23 00:47:06,846 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-8] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:47:06,847 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-8] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:47:06,848 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:47:06,849 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Property graph path : kiraciId
+2022-01-23 00:47:06,850 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:47:06,850 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Cast all arguments to type java.lang.String.
+2022-01-23 00:47:06,851 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-8] Parsing argument 'null' as type String, thread http-nio-8085-exec-8
+2022-01-23 00:47:06,851 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Creating predicate: propertyPath != [null]
+2022-01-23 00:47:07,070 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-8] MuhKiraci Size: 3
+2022-01-23 00:47:12,579 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-9] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:47:12,579 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-10] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:47:12,580 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-10] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:47:12,581 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:47:12,581 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Property graph path : kiraci.kiraciId
+2022-01-23 00:47:12,582 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:47:12,582 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:47:12,583 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Cast all arguments to type java.lang.String.
+2022-01-23 00:47:12,583 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-10] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-10
+2022-01-23 00:47:12,583 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-10] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:47:13,024 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-10] MuhHesap Size: 3
+2022-01-23 00:47:13,045 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-1] Creating CriteriaQuery for ComparisonNode: oranId!='null'
+2022-01-23 00:47:13,046 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-1] Creating Predicate for ComparisonNode: oranId!='null'
+2022-01-23 00:47:13,047 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Creating Predicate for comparison node: oranId!='null'
+2022-01-23 00:47:13,048 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Property graph path : oranId
+2022-01-23 00:47:13,048 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Create property path for type muhasebe.model.MuhOran property oranId.
+2022-01-23 00:47:13,049 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Cast all arguments to type java.lang.String.
+2022-01-23 00:47:13,049 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-1] Parsing argument 'null' as type String, thread http-nio-8085-exec-1
+2022-01-23 00:47:13,049 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Creating predicate: propertyPath != [null]
+2022-01-23 00:47:13,145 INFO muhasebe.custom.impl.MuhOranServiceImpl [http-nio-8085-exec-1] MuhOran Size: 2
+2022-01-23 00:47:29,864 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-3] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:47:29,865 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-3] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:47:29,865 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:47:29,865 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Property graph path : kiraciId
+2022-01-23 00:47:29,866 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:47:29,866 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Cast all arguments to type java.lang.String.
+2022-01-23 00:47:29,867 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-3] Parsing argument 'null' as type String, thread http-nio-8085-exec-3
+2022-01-23 00:47:29,867 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating predicate: propertyPath != [null]
+2022-01-23 00:47:30,089 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-3] MuhKiraci Size: 3
+2022-01-23 00:47:33,878 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-2] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:47:33,878 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-4] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:47:33,879 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-4] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:47:33,880 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:47:33,880 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Property graph path : kiraci.kiraciId
+2022-01-23 00:47:33,881 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:47:33,881 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:47:33,882 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Cast all arguments to type java.lang.String.
+2022-01-23 00:47:33,882 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-4] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-4
+2022-01-23 00:47:33,883 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:47:34,313 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-4] MuhHesap Size: 3
+2022-01-23 00:47:54,042 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-9] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:47:54,043 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-9] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:47:54,044 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:47:54,044 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Property graph path : kiraciId
+2022-01-23 00:47:54,045 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:47:54,046 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Cast all arguments to type java.lang.String.
+2022-01-23 00:47:54,047 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-9] Parsing argument 'null' as type String, thread http-nio-8085-exec-9
+2022-01-23 00:47:54,047 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating predicate: propertyPath != [null]
+2022-01-23 00:47:54,276 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-9] MuhKiraci Size: 3
+2022-01-23 00:50:17,600 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-1] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:50:17,600 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-7] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:17,601 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-7] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:17,602 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:17,603 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Property graph path : kiraci.kiraciId
+2022-01-23 00:50:17,604 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:50:17,605 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:50:17,606 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Cast all arguments to type java.lang.String.
+2022-01-23 00:50:17,607 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-7] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-7
+2022-01-23 00:50:17,608 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:50:18,023 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-7] MuhHesap Size: 3
+2022-01-23 00:50:35,185 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-2] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:50:35,185 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-4] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:35,186 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-4] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:35,187 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:35,188 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Property graph path : kiraci.kiraciId
+2022-01-23 00:50:35,189 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:50:35,190 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:50:35,190 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Cast all arguments to type java.lang.String.
+2022-01-23 00:50:35,191 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-4] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-4
+2022-01-23 00:50:35,192 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:50:35,614 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-4] MuhHesap Size: 3
+2022-01-23 00:50:41,478 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-5] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:50:41,480 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-9] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:41,482 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-9] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:41,483 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:41,483 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Property graph path : kiraci.kiraciId
+2022-01-23 00:50:41,484 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:50:41,485 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:50:41,486 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Cast all arguments to type java.lang.String.
+2022-01-23 00:50:41,487 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-9] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-9
+2022-01-23 00:50:41,487 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:50:41,755 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-10] BEDEL: =====> b86c182d-7a11-49da-98c6-3d2bde08b0a0 silindi!
+2022-01-23 00:50:42,067 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-10] request [POST http://localhost:9200/islemlog/_doc?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."]
+2022-01-23 00:50:42,078 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-9] MuhHesap Size: 3
+2022-01-23 00:50:42,089 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-10] request [POST http://localhost:9200/islemlog/_refresh?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:50:42,090 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-10] Create Islem Log!
+2022-01-23 00:50:42,305 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-7] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:50:42,305 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-3] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:42,306 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-3] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:42,308 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:42,310 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Property graph path : kiraci.kiraciId
+2022-01-23 00:50:42,311 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:50:42,312 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:50:42,312 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Cast all arguments to type java.lang.String.
+2022-01-23 00:50:42,313 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-3] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-3
+2022-01-23 00:50:42,313 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:50:42,374 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-2] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:50:42,678 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-3] MuhHesap Size: 2
+2022-01-23 00:50:42,686 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-4] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:42,687 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-4] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:42,688 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:42,689 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Property graph path : kiraci.kiraciId
+2022-01-23 00:50:42,689 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:50:42,690 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:50:42,691 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Cast all arguments to type java.lang.String.
+2022-01-23 00:50:42,691 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-4] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-4
+2022-01-23 00:50:42,692 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:50:43,028 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-4] MuhHesap Size: 2
+2022-01-23 00:50:58,746 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-5] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:50:58,747 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-9] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:58,748 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-9] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:58,748 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:50:58,749 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Property graph path : kiraci.kiraciId
+2022-01-23 00:50:58,749 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:50:58,749 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:50:58,750 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Cast all arguments to type java.lang.String.
+2022-01-23 00:50:58,750 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-9] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-9
+2022-01-23 00:50:58,752 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-9] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:50:59,189 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-9] MuhHesap Size: 2
+2022-01-23 00:51:05,219 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-1] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:51:05,220 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-7] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='c96a6bea-8540-42b8-b187-7fcaa669516f'
+2022-01-23 00:51:05,220 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-7] Creating Predicate for ComparisonNode: kiraci.kiraciId=='c96a6bea-8540-42b8-b187-7fcaa669516f'
+2022-01-23 00:51:05,221 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Creating Predicate for comparison node: kiraci.kiraciId=='c96a6bea-8540-42b8-b187-7fcaa669516f'
+2022-01-23 00:51:05,221 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Property graph path : kiraci.kiraciId
+2022-01-23 00:51:05,221 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:51:05,222 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:51:05,222 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Cast all arguments to type java.lang.String.
+2022-01-23 00:51:05,223 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-7] Parsing argument 'c96a6bea-8540-42b8-b187-7fcaa669516f' as type String, thread http-nio-8085-exec-7
+2022-01-23 00:51:05,223 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-7] Creating predicate: propertyPath == [c96a6bea-8540-42b8-b187-7fcaa669516f]
+2022-01-23 00:51:05,596 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-7] MuhHesap Size: 1
+2022-01-23 00:51:14,944 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-3] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:51:14,944 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-3] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:51:14,945 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:51:14,946 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Property graph path : kiraciId
+2022-01-23 00:51:14,946 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:51:14,947 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Cast all arguments to type java.lang.String.
+2022-01-23 00:51:14,948 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-3] Parsing argument 'null' as type String, thread http-nio-8085-exec-3
+2022-01-23 00:51:14,948 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-3] Creating predicate: propertyPath != [null]
+2022-01-23 00:51:15,220 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-3] MuhKiraci Size: 3
+2022-01-23 00:51:16,560 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-6] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:51:16,560 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-4] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:51:16,561 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-4] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:51:16,561 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:51:16,562 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Property graph path : kiraci.kiraciId
+2022-01-23 00:51:16,563 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:51:16,563 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:51:16,564 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Cast all arguments to type java.lang.String.
+2022-01-23 00:51:16,565 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-4] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-4
+2022-01-23 00:51:16,566 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-4] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:51:16,985 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-4] MuhHesap Size: 2
+2022-01-23 00:52:48,239 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-7] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:52:48,244 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-2] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:48,245 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-2] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:48,246 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:48,247 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Property graph path : kiraci.kiraciId
+2022-01-23 00:52:48,249 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:52:48,250 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:52:48,250 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Cast all arguments to type java.lang.String.
+2022-01-23 00:52:48,250 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-2] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-2
+2022-01-23 00:52:48,251 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:52:48,658 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-2] MuhHesap Size: 2
+2022-01-23 00:52:58,528 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-4] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:52:58,531 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-8] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:58,532 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-8] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:58,534 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:58,536 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Property graph path : kiraci.kiraciId
+2022-01-23 00:52:58,538 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:52:58,539 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:52:58,539 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Cast all arguments to type java.lang.String.
+2022-01-23 00:52:58,540 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-8] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-8
+2022-01-23 00:52:58,541 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-8] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:52:58,904 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-5] BEDEL: =====> 41839aab-5653-4b73-b61a-c6175e855c1f eklendi!
+2022-01-23 00:52:59,000 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-8] MuhHesap Size: 2
+2022-01-23 00:52:59,056 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-5] request [POST http://localhost:9200/islemlog/_doc?timeout=1m] returned 1 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."]
+2022-01-23 00:52:59,071 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-5] request [POST http://localhost:9200/islemlog/_refresh?ignore_throttled=false&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:52:59,072 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-5] Create Islem Log!
+2022-01-23 00:52:59,216 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-10] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:52:59,217 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-1] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:59,217 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-1] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:59,218 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:59,218 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Property graph path : kiraci.kiraciId
+2022-01-23 00:52:59,218 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:52:59,219 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:52:59,219 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Cast all arguments to type java.lang.String.
+2022-01-23 00:52:59,220 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-1] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-1
+2022-01-23 00:52:59,220 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-1] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:52:59,308 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-7] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:52:59,644 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-1] MuhHesap Size: 3
+2022-01-23 00:52:59,651 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-2] Creating CriteriaQuery for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:59,651 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-2] Creating Predicate for ComparisonNode: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:59,652 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Creating Predicate for comparison node: kiraci.kiraciId=='83ab9dcb-c14b-4e64-b15c-57561ccd8dcb'
+2022-01-23 00:52:59,652 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Property graph path : kiraci.kiraciId
+2022-01-23 00:52:59,653 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Create a join between muhasebe.model.MuhKiraBedel and muhasebe.model.MuhKiraci.
+2022-01-23 00:52:59,654 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:52:59,654 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Cast all arguments to type java.lang.String.
+2022-01-23 00:52:59,655 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-2] Parsing argument '83ab9dcb-c14b-4e64-b15c-57561ccd8dcb' as type String, thread http-nio-8085-exec-2
+2022-01-23 00:52:59,655 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-2] Creating predicate: propertyPath == [83ab9dcb-c14b-4e64-b15c-57561ccd8dcb]
+2022-01-23 00:53:00,038 INFO muhasebe.custom.impl.MuhKiraBedelServiceImpl [http-nio-8085-exec-2] MuhHesap Size: 3
+2022-01-23 00:53:46,517 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-4] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:53:47,852 INFO muhasebe.custom.impl.MuhKodServiceImpl [http-nio-8085-exec-9] Get MuhKodDto UstId: KOD_CINSIYET
+2022-01-23 00:53:47,856 INFO muhasebe.util.rsql.jpa.JpaCriteriaQueryVisitor [http-nio-8085-exec-5] Creating CriteriaQuery for ComparisonNode: kiraciId!='null'
+2022-01-23 00:53:47,856 INFO muhasebe.util.rsql.jpa.JpaPredicateVisitor [http-nio-8085-exec-5] Creating Predicate for ComparisonNode: kiraciId!='null'
+2022-01-23 00:53:47,857 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating Predicate for comparison node: kiraciId!='null'
+2022-01-23 00:53:47,857 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Property graph path : kiraciId
+2022-01-23 00:53:47,858 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Create property path for type muhasebe.model.MuhKiraci property kiraciId.
+2022-01-23 00:53:47,858 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Cast all arguments to type java.lang.String.
+2022-01-23 00:53:47,859 INFO muhasebe.util.rsql.argument.ArgumentParser [http-nio-8085-exec-5] Parsing argument 'null' as type String, thread http-nio-8085-exec-5
+2022-01-23 00:53:47,859 INFO muhasebe.util.rsql.jpa.PredicateBuilder [http-nio-8085-exec-5] Creating predicate: propertyPath != [null]
+2022-01-23 00:53:48,238 INFO muhasebe.custom.impl.MuhKiraciServiceImpl [http-nio-8085-exec-5] MuhKiraci Size: 3
+2022-01-23 00:54:32,663 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-1] request [POST http://localhost:9200/kullanicilog/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:54:32,675 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-1] Log User Size: 6
+2022-01-23 00:54:34,208 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-2] request [POST http://localhost:9200/hatalog/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:54:34,220 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-2] request [POST http://localhost:9200/hatalog/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:54:34,225 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-2] Log Hata Size: 5
+2022-01-23 00:54:36,612 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-6] request [POST http://localhost:9200/islemlog/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:54:36,625 WARN org.elasticsearch.client.RequestLogger [http-nio-8085-exec-6] request [POST http://localhost:9200/islemlog/_search?typed_keys=true&max_concurrent_shard_requests=5&ignore_unavailable=false&expand_wildcards=open&allow_no_indices=true&ignore_throttled=true&search_type=query_then_fetch&batched_reduce_size=512&ccs_minimize_roundtrips=true] returned 2 warnings: [299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html to enable security."],[299 Elasticsearch-7.16.2-2b937c44140b6559905130a8650c64dbd0879cfb "[ignore_throttled] parameter is deprecated because frozen indices have been deprecated. Consider cold or frozen tiers in place of frozen indices."]
+2022-01-23 00:54:36,648 INFO muhasebe.custom.impl.MuhLogServiceImpl [http-nio-8085-exec-6] Log Islem Size: 23

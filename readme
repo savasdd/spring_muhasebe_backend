@@ -1,0 +1,90 @@
+Front tarafı react js ile yazılmış muhasebe projesinin backend tarafını oluşturmakdır.
+Proje String Boot ile yazıldı. Veri tabanı PostgreSQL. 
+Projede jwt, rsql, jpa spesification, aop, entity relations, restful, swigger3 openapi vb. gibi yapılar kullanıldı.
+Proje sonrasında geliştirilip elasticsearch, aws, graphql, microservis gibi teknolojiler eklenecektir.
+
+
+-----------BİLEŞENLER
+- AuditingEntityListener, Auditable<U>
+- UUID, UUIDGenerator
+- JsonView, MuhView
+- ModelMapper, Map
+- SecurityConfig, JWT, TokenFilter, TokenManeger, UserService
+- RestController, @PathVariable, @RequestBody, @RequestParam
+- HTTP Metot-> Post, Put, Get, Delete, Patch
+- RSQL: cz.jirutka?-> RSQLParser, Node, RSQLVisitor
+
+
+
+-----------TDD-TEST
+spring-boot-starter-test:
+->spring-boot-test-autoconfigure
+->assertj-core
+->junit-jupiter
+->mockito-core
+->mockito-junit-jupiter
+
+Respository bazında CRUD metotları için test yazıldı.
+resources dizini altında test için bağlanılacak db connection eklendi.
+
+CREATE:	  assertThat(list).isPresent().hasValueSatisfying
+THROW:	  assertThatThrownBy(() -> bedel.save(dto)).hasMessageContaining
+DELETE:   assertThat(kod.count()).isEqualTo(1);
+DELETEALL:assertThat(kod.count()).isEqualTo(0);
+LİST:	  assertThat(list).hasSize(1);
+UPDATE:	  assertThat(hesap).isEqualTo(newHesap);
+
+
+----------Singleton Desing Pattern
+private static MuhHesap instance = null;
+static olarak üretilen nesne getInstance() metotu üzerinden alındı.
+
+
+----------OpenAPI
+Proje json file üzerinden rest client çıkarmak ve endpointler hakkında detaylı bilgiler almak adına projeye swagger openapi bileşeni eklendi.
+config file ayarlandı ve endpointler schema name olarak belirtildi.
+ui link: http://localhost:8085/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/
+
+springdoc-openapi-ui
+springdoc-openapi-data-rest
+springdoc-openapi-webmvc-core
+springdoc-openapi-security
+springdoc-openapi-javadoc
+
+
+----------Logging
+java.util.Logging
+ConsoleHandler(console düşen loglar)
+FileHandler(file içine yazılan loglar)
+Level(log seviyesi: info,debug,error,warn)
+
+->Loglama asenkron olmalı (loglama için çok zaman almaması için)
+->printStackTrace ve SYSOUT kullanmamak gerekiyor(formatları bozuyor)
+->sensitive data olmamalı (kritik veriler log içinde olmamalı)
+->tüm loglar merkezi bir yerde toplanmalı.
+->leveller doğru yerde kullanılmalı.
+->farklı leveller kullanılabilir.
+->Lombok @Slf4j kullanılabilir.
+
+----------ELASTICSEARCH
+Log tutmak adına spring-elasticsearch-data kullanıldı.
+Kullanıcı, Hata ve İşlem olarak loglar docker üzerinde çalışan Elasticsearchte tutulmaktadır.
+Elasticsearch field ve document özellikleri kullanılırak repository üzerinden CRUD işlemleri yapıldı.
+
+-ElasticsearchConfig
+-ElasticsearchRepository
+
+----------EXCEPTION
+-MUHException: Exception sınıfını extends eden custom hata sınıfı üretildi.
+-MUHExceptionDetails: Details alanları üzerinden ilgili exception response edildi.
+-MUHGlobalException: Global sınıfı içinde controlAdvice ile response entity hataları yakalanıyor ve set ediliyor.
+-MUHExceptionValidation: BindingResult hataları bu sınıf üzerinden formatlanıp response ediliyor.Validation için gerekiyor.
+
+----------JASPER
+-JasperConfig: application üzerinden cennetion bilgileri okunup, ilgili database için datasource oluşturuluyor.
+-ReportFilter: jrxml olarak alınan raporu compile eden veya jasper olarak alınan raporu load eden sınıftır.
+-ReportExporter: compile edilen raporu pdf,docx veya excel olarak üreten sınıftır.
+JasperUtil: datasource yapan, raporu compile eden sonra export eden sınıftır.
+
+
+

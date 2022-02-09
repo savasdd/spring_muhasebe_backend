@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BEDEL" language="groovy" pageWidth="700" pageHeight="842" columnWidth="660" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="53d536e4-7754-41e6-9a8e-0c90b743a07f">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="P_KIRACI" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select k.ad ||' '|| k.soyad as kiraci,
+b.kira_suresi ,
+coalesce (o.tanim,'') as oran_tanim,
+o.oran,
+b.kiralama_tarihi ,
+b.bedel ,
+b.toplam_bedel,
+(b.bedel+b.toplam_bedel) as net_bedel
+from muhsb.muh_kira_bedel b left join muhsb.muh_kiraci k on k.kiraci_id =b.kiraci
+left join muhsb.muh_oran o on o.oran_id =b.faiz_orani
+where k.kiraci_id =$P{P_KIRACI}]]>
+	</queryString>
+	<field name="kiraci" class="java.lang.String"/>
+	<field name="kira_suresi" class="java.lang.Integer"/>
+	<field name="oran_tanim" class="java.lang.String"/>
+	<field name="oran" class="java.math.BigDecimal"/>
+	<field name="kiralama_tarihi" class="java.sql.Date"/>
+	<field name="bedel" class="java.math.BigDecimal"/>
+	<field name="toplam_bedel" class="java.math.BigDecimal"/>
+	<field name="net_bedel" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="241" y="24" width="173" height="20" forecolor="#FF3366" uuid="67027762-f0fb-47ca-ad68-ffb2d1a3b8b4"/>
+				<textElement>
+					<font size="12" isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[KİRA BEDEL LİSTE RAPORU]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="16" width="127" height="20" uuid="4dbb2cef-0a62-4e2d-bcb8-fd77867d5902"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Kiraci]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="16" width="62" height="20" uuid="06291947-ba46-433c-926a-f6c3036ad1a6"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Kira Süresi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="16" width="72" height="20" uuid="495f730f-b50a-44e7-8fe0-a201176c88b8"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Faiz Oranı]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="16" width="88" height="20" uuid="05964c59-aef0-495a-ae44-2b09ac24b411"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Faiz Oran Değeri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="16" width="88" height="20" uuid="b25ceeda-c132-44b2-8412-34030d675f15"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Kiralama Tarihi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="16" width="73" height="20" uuid="a3b31785-835e-4f3d-a656-d7bfc08884ab"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Bedel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="16" width="73" height="20" uuid="650ed397-5791-453a-9b03-80947e7b7d89"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Toplam Bedel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="583" y="16" width="77" height="20" uuid="0fcaa69f-6485-4fdf-85cf-9bd206efc7fc"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfEncoding="Cp1254"/>
+				</textElement>
+				<text><![CDATA[Net Bedel]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="127" height="20" uuid="235bcf60-8190-478c-9397-70e7e00fa493"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kiraci}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="127" y="0" width="62" height="20" uuid="27a470dc-5d66-4f58-9edb-48d6636c10fa"/>
+				<box rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kira_suresi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="189" y="0" width="72" height="20" uuid="de6e4677-06e7-4999-b737-c7c628fdbdf5"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oran_tanim}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="261" y="0" width="88" height="20" uuid="1d0116a6-f0f4-4424-8d56-4c2305bdf2a8"/>
+				<box rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{oran}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
+				<reportElement x="349" y="0" width="88" height="20" uuid="d1bfe4dc-cc25-4d19-a0bf-b3ba7abaf989"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kiralama_tarihi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="437" y="0" width="73" height="20" uuid="793dcbbb-18ee-444f-869e-03511ec052c2"/>
+				<box rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bedel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="510" y="0" width="73" height="20" uuid="4a01edff-0f56-4ad0-8168-1f786c8aed1e"/>
+				<box rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{toplam_bedel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="583" y="0" width="77" height="20" uuid="fcbc0a1c-e306-4ca8-8593-8b2dbb1dc29d"/>
+				<box rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font pdfEncoding="Cp1254"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{net_bedel}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
