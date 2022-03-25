@@ -135,7 +135,7 @@ public class MuhKodServiceImpl implements MuhKodServiceAsync {
 	}
 
 	public Generic<MuhKodDto> jpa(Pageable page) throws MUHException {
-		Page<MuhKod> list = repository.getPageble(page);
+		Page<MuhKod> list = repository.findAll(page);
 		Generic<MuhKodDto> generic = new Generic<MuhKodDto>();
 		generic.setData(mapper.mapAll(list, MuhKodDto.class));
 		generic.setTotalCount(list.getTotalElements());
@@ -146,7 +146,7 @@ public class MuhKodServiceImpl implements MuhKodServiceAsync {
 	@Override
 	public List<MuhKodDto> getKodByUstId(String id) throws MUHException {
 		log.info("Get MuhKodDto UstId: " + id);
-		return mapper.mapAll(repository.getKodByUstKod(id), MuhKodDto.class);
+		return mapper.mapAll(repository.findKodByUstKod(id), MuhKodDto.class);
 	}
 
 }

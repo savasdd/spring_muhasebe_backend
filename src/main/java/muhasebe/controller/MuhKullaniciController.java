@@ -48,7 +48,7 @@ public class MuhKullaniciController {
 	@ElasticLog
 	@Validated
 	@GetMapping(value = "/kullanicis/{id}")
-	public ResponseEntity<Object> getKullaniciById(@PathVariable String id) throws MUHException {
+	public ResponseEntity<Object> getKullaniciById(@PathVariable Long id) throws MUHException {
 		try {
 			return ResponseHandler.generateResponse(EnumUtil.OK_GET, HttpStatus.OK,
 					service.getKullanici().getKullaniciById(id));
@@ -76,7 +76,7 @@ public class MuhKullaniciController {
 	@ElasticLog
 	@Transactional
 	@PutMapping(value = "/kullanicis/{id}")
-	public ResponseEntity<Object> updateKullanici(@PathVariable String id, @RequestBody @Validated MuhKullanici model,
+	public ResponseEntity<Object> updateKullanici(@PathVariable Long id, @RequestBody @Validated MuhKullanici model,
 			BindingResult errors) throws MUHException {
 		try {
 			if (errors.hasErrors())
@@ -92,7 +92,7 @@ public class MuhKullaniciController {
 	@ElasticLog
 	@Transactional
 	@DeleteMapping(value = "/kullanicis/{id}")
-	public ResponseEntity<Object> deleteKullanici(@PathVariable String id) throws MUHException {
+	public ResponseEntity<Object> deleteKullanici(@PathVariable Long id) throws MUHException {
 		try {
 			return ResponseHandler.generateResponse(EnumUtil.OK_DELETE, HttpStatus.OK,
 					service.getKullanici().deleteKullanici(id));

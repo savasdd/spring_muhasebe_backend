@@ -17,6 +17,7 @@ import muhasebe.custom.async.MuhKullaniciServiceAsync;
 import muhasebe.custom.async.MuhLogServiceAsync;
 import muhasebe.custom.async.MuhOranServiceAsync;
 import muhasebe.custom.async.MuhRolServiceAsync;
+import muhasebe.custom.async.MuhTokenRefreshServiceAsync;
 
 @Builder
 @Getter
@@ -52,5 +53,8 @@ public class Service {
 
 	@Autowired
 	private MuhJasperServiceAsync jasper;
+
+	@Autowired
+	private MuhTokenRefreshServiceAsync refresh;
 
 }

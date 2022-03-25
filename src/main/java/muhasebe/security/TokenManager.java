@@ -1,26 +1,40 @@
 package muhasebe.security;
 
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.util.Date;
 
-import org.springframework.stereotype.Service;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import muhasebe.security.services.UserDetailsImpl;
+import muhasebe.util.EnumUtil;
 
-@Service
+@Component
 public class TokenManager {
 
-	public static final long JWT_TOKEN_EXPIRE_TIME = 5_900_000;
-	Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+	Key key1 = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+
+	private Key getSigningKey() {
+		String sha3Hex = new DigestUtils("SHA-256").digestAsHex(EnumUtil.SECRET_KEY.getBytes(StandardCharsets.UTF_8));
+		byte[] keyBytes = Decoders.BASE64.decode(sha3Hex);
+		return Keys.hmacShaKeyFor(keyBytes);
+	}
+
+	public String generateJwtToken(UserDetailsImpl userPrincipal) {
+		return generateToken(userPrincipal.getUsername());
+	}
 
 	public String generateToken(String username) {
-		return Jwts.builder().setSubject(username).setIssuer("muhproject")
+		return Jwts.builder().setSubject(username).setIssuer("muhasebe")
 				.setIssuedAt(new Date(System.currentTimeMillis()))
-				.setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_EXPIRE_TIME)).signWith(key).compact();
-
+				.setExpiration(new Date(System.currentTimeMillis() + EnumUtil.TOKEN_EXPIRE_TIME))
+				.signWith(getSigningKey()).compact();
 	}
 
 	public boolean tokenValidate(String tokan) {
@@ -31,7 +45,7 @@ public class TokenManager {
 	}
 
 	public String getUserFromToken(String token) {
-		Claims claims = getClaims(token); // key ile token çözüldü ve içindeki değerler parse edildi Clams
+		Claims claims = getClaims(token); // key ile token çözüldü ve içindeki değerler parse edildi
 		return claims.getSubject();// user
 	}
 
@@ -41,7 +55,7 @@ public class TokenManager {
 	}
 
 	private Claims getClaims(String token) {
-		return Jwts.parser().setSigningKey(key).parseClaimsJws(token).getBody();
+		return Jwts.parser().setSigningKey(getSigningKey()).parseClaimsJws(token).getBody();
 	}
 
 }

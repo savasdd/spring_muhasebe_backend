@@ -3,11 +3,11 @@ package muhasebe.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Version;
-
-import org.hibernate.annotations.GenericGenerator;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,7 +31,7 @@ public class MuhKullanici extends Auditable<String> {
 
 	/*
 	 * Güvenlik açısından daha korunaklı olması adına hibernate UUID yöntemini
-	 * kullandım.Lombokun get/set, toString ve Arg özelliklerini kullandım.
+	 * kullandım.Lombok get/set, toString ve Arg özelliklerini kullandım.
 	 */
 
 	private static MuhKullanici instance = null;
@@ -43,10 +43,10 @@ public class MuhKullanici extends Auditable<String> {
 	}
 
 	@Id
-	@GeneratedValue(generator = "UUID")
-	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
 	@Column(name = "KULLANICI_ID", updatable = false, nullable = false)
-	private String kullaniciId;
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "GNL_GEN")
+	@SequenceGenerator(name = "GNL_GEN", sequenceName = "MUH_SEQ", allocationSize = 1)
+	private Long kullaniciId;
 
 	@NotNullValid(message = "Ad alanı boş geçilemez")
 	@Column(name = "AD")

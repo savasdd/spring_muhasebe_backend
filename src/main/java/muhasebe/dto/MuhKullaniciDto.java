@@ -19,7 +19,7 @@ import muhasebe.util.MuhView;
 public class MuhKullaniciDto {
 
 	@JsonView(MuhView.Public.class)
-	private String kullaniciId;
+	private Long kullaniciId;
 
 	@JsonView(MuhView.Public.class)
 	private String ad;
@@ -32,8 +32,5 @@ public class MuhKullaniciDto {
 
 	@JsonView(MuhView.Public.class)
 	private String kullaniciAdi;
-
-	@JsonView(MuhView.Public.class)
-	private String sifre;
 
 }

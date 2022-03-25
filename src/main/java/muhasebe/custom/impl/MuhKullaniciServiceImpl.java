@@ -52,7 +52,7 @@ public class MuhKullaniciServiceImpl implements MuhKullaniciServiceAsync {
 	}
 
 	@Override
-	public MuhKullaniciDto getKullaniciById(String id) throws MUHException {
+	public MuhKullaniciDto getKullaniciById(Long id) throws MUHException {
 		return mapper.map(repository.findByKullaniciId(id), MuhKullaniciDto.class);
 	}
 
@@ -74,7 +74,7 @@ public class MuhKullaniciServiceImpl implements MuhKullaniciServiceAsync {
 	}
 
 	@Override
-	public MuhKullaniciDto updateKullanici(String id, MuhKullanici model) throws MUHException {
+	public MuhKullaniciDto updateKullanici(Long id, MuhKullanici model) throws MUHException {
 		MuhKullanici exist = repository.findById(id)
 				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 		lockEntity(exist);
@@ -89,7 +89,7 @@ public class MuhKullaniciServiceImpl implements MuhKullaniciServiceAsync {
 	}
 
 	@Override
-	public MuhKullaniciDto deleteKullanici(String id) throws MUHException {
+	public MuhKullaniciDto deleteKullanici(Long id) throws MUHException {
 		MuhKullanici kullanici = repository.findByKullaniciId(id);
 		repository.delete(kullanici);
 		log.info("KULLANICI: =====> " + id + " silindi!");
@@ -104,7 +104,7 @@ public class MuhKullaniciServiceImpl implements MuhKullaniciServiceAsync {
 
 	@Override
 	public MuhKullaniciDto findKullaniciAdi(String userName) {
-		MuhKullanici user = repository.getByKullaniciAdi(userName)
+		MuhKullanici user = repository.findByKullaniciAdi(userName)
 				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Kullanıcı Bulunmadı!"));
 		return mapper.map(user, MuhKullaniciDto.class);
 	}
@@ -139,7 +139,7 @@ public class MuhKullaniciServiceImpl implements MuhKullaniciServiceAsync {
 	}
 
 	public Generic<MuhKullaniciDto> jpa(Pageable page) throws MUHException {
-		Page<MuhKullanici> list = repository.getPageble(page);
+		Page<MuhKullanici> list = repository.findAll(page);
 		Generic<MuhKullaniciDto> generic = new Generic<MuhKullaniciDto>();
 		generic.setData(mapper.mapAll(list, MuhKullaniciDto.class));
 		generic.setTotalCount(list.getTotalElements());

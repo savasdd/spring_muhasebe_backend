@@ -1,57 +1,63 @@
 package muhasebe.security;
 
+import static org.springframework.http.HttpHeaders.AUTHORIZATION;
+
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
-import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-@Component
+import muhasebe.security.services.UserDetailsServiceImpl;
+
 public class TokenFilter extends OncePerRequestFilter {
 
 	@Autowired
-	private TokenManager manager;
+	private TokenManager jwtUtils;
+
+	@Autowired
+	private UserDetailsServiceImpl userDetailsService;
+
+	private static final Logger logger = LoggerFactory.getLogger(TokenFilter.class);
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
+		try {
+			String jwt = parseJwt(request);
+			if (jwt != null && jwtUtils.tokenValidate(jwt)) {
+				String username = jwtUtils.getUserFromToken(jwt);
 
-		// Bearer iki parçaya bölüp token almak gerekiyor
-		final String header = request.getHeader("Authorization");// header alındı
-		String token = null;
-		String username = null;
+				UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+				UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+						userDetails, null, userDetails.getAuthorities());
+				authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
-		if (header != null && header.contains("Bearer")) {
-			token = header.substring(7);
-			try {
-				username = manager.getUserFromToken(token);// token ile username alındı
-
-			} catch (Exception e) {
-				System.out.println(e.getMessage());
+				SecurityContextHolder.getContext().setAuthentication(authentication);
 			}
+		} catch (Exception e) {
+			logger.error("Cannot set user authentication: {}", e.getMessage());
 		}
 
-		if (username != null && token != null && SecurityContextHolder.getContext().getAuthentication() == null) {
-
-			if (manager.tokenValidate(token)) { // ilk defa login olduysa token hala valid ise login olacak
-				UsernamePasswordAuthenticationToken login = new UsernamePasswordAuthenticationToken(username, null,
-						new ArrayList<>());
-				login.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-				SecurityContextHolder.getContext().setAuthentication(login);
-			}
-		}
-
-		filterChain.doFilter(request, response);// işleme devam et
-
+		filterChain.doFilter(request, response);
 	}
 
+	private String parseJwt(HttpServletRequest request) {
+		String header = request.getHeader(AUTHORIZATION);// header
+
+		if (header != null && header.contains("Bearer")) {
+			return header.substring(7);
+		}
+		return null;
+	}
 }

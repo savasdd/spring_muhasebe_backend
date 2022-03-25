@@ -140,7 +140,7 @@ public class MuhHesapServiceImpl implements MuhHesapServiceAsync {
 	}
 
 	public Generic<MuhHesapDto> jpa(Pageable page) throws MUHException {
-		Page<MuhHesap> list = repository.getPageble(page);
+		Page<MuhHesap> list = repository.findAll(page);
 		Generic<MuhHesapDto> generic = new Generic<MuhHesapDto>();
 		generic.setData(mapper.mapAll(list, MuhHesapDto.class));
 		generic.setTotalCount(list.getTotalElements());

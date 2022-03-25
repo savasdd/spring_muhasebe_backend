@@ -151,7 +151,7 @@ public class MuhKiraciServiceImpl implements MuhKiraciServiceAsync {
 	}
 
 	public Generic<MuhKiraciDto> jpa(Pageable page) throws MUHException {
-		Page<MuhKiraci> list = repository.getPageble(page);
+		Page<MuhKiraci> list = repository.findAll(page);
 		Generic<MuhKiraciDto> generic = new Generic<MuhKiraciDto>();
 		generic.setData(mapper.mapAll(list, MuhKiraciDto.class));
 		generic.setTotalCount(list.getTotalElements());

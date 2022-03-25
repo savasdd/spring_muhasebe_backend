@@ -80,7 +80,7 @@ public class MuhKiraBedelServiceImpl implements MuhKiraBedelServiceAsync {
 
 	@Override
 	public MuhKiraBedelDto updateBedel(String kiraciId, String id, MuhKiraBedel model) throws MUHException {
-		MuhKiraBedel exist = repository.findByKiraciAndBedel(kiraciId, id)
+		MuhKiraBedel exist = repository.findByKiraci_KiraciIdAndKiraId(kiraciId, id)
 				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 		lockEntity(exist);
 
@@ -102,7 +102,7 @@ public class MuhKiraBedelServiceImpl implements MuhKiraBedelServiceAsync {
 
 	@Override
 	public MuhKiraBedelDto deleteBedel(String kiraciId, String id) throws MUHException {
-		MuhKiraBedel bedel = repository.findByKiraciAndBedel(kiraciId, id)
+		MuhKiraBedel bedel = repository.findByKiraci_KiraciIdAndKiraId(kiraciId, id)
 				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 		repository.delete(bedel);
 		log.info("BEDEL: =====> " + id + " silindi!");

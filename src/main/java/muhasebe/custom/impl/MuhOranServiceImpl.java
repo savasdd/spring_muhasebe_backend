@@ -128,7 +128,7 @@ public class MuhOranServiceImpl implements MuhOranServiceAsync {
 	}
 
 	public Generic<MuhOranDto> jpa(Pageable page) throws MUHException {
-		Page<MuhOran> list = repository.getPageble(page);
+		Page<MuhOran> list = repository.findAll(page);
 		Generic<MuhOranDto> generic = new Generic<MuhOranDto>();
 		generic.setData(mapper.mapAll(list, MuhOranDto.class));
 		generic.setTotalCount(list.getTotalElements());

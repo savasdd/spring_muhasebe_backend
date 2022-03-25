@@ -123,7 +123,7 @@ public class MuhRolServiceImpl implements MuhRolServiceAsync {
 	}
 
 	public Generic<MuhRolDto> jpa(Pageable page) throws MUHException {
-		Page<MuhRol> list = repository.getPageble(page);
+		Page<MuhRol> list = repository.findAll(page);
 		Generic<MuhRolDto> generic = new Generic<MuhRolDto>();
 		generic.setData(mapper.mapAll(list, MuhRolDto.class));
 		generic.setTotalCount(list.getTotalElements());

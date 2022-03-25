@@ -1,8 +1,6 @@
 package muhasebe.security;
 
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,34 +13,42 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import muhasebe.security.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true) // tüm metotlardan önce security çalışacak
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+	
+	@Autowired
+	UserDetailsServiceImpl userDetailsService;
 
 	@Autowired
-	private TokenFilter filter;
+	private TokenEntryPointJwt unauthorizedHandler;
 
-	@Autowired
-	private UserDetailsService service;
+	@Bean
+	public TokenFilter authenticationJwtTokenFilter() {
+		return new TokenFilter();
+	}
 
-	@Autowired
-	public void passordEncoder(AuthenticationManagerBuilder builder) throws Exception {
-		builder.userDetailsService(service).passwordEncoder(getBCryptPasswordEncoder());//password encoder
+	@Override
+	public void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
+		authenticationManagerBuilder.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
 	}
 
 	@Bean
-	public BCryptPasswordEncoder getBCryptPasswordEncoder() {
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		return super.authenticationManagerBean();
+	}
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-
-	@Bean
-	public AuthenticationManager getAuthenticationManager() throws Exception {
-		return super.authenticationManagerBean();// instance üretiliyor
-	}
-	
 	
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -58,36 +64,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // Set unauthorized requests exception handler
         http = http
             .exceptionHandling()
-            .authenticationEntryPoint(
-                (request, response, ex) -> {
-                    response.sendError(
-                        HttpServletResponse.SC_UNAUTHORIZED,
-                        ex.getMessage()
-                    );
-                }
-            )
+            .authenticationEntryPoint(unauthorizedHandler)
             .and();
 
         // Set permissions on endpoints
         http.authorizeRequests()
             // Our public endpoints
-            .antMatchers(HttpMethod.POST, "/api/auth/token").permitAll()
+            .antMatchers(HttpMethod.POST, "/api/auth/getToken").permitAll()
+            .antMatchers(HttpMethod.POST, "/api/auth/refreshToken").permitAll()
             .antMatchers("/v3/api-docs", "/configuration/ui", "/swagger-resources", "/configuration/security", "swagger-ui/index.html","/swagger-ui.html", "/webjars/**", "/swagger-resources/configuration/ui", "/swagger-resources/configuration/security").permitAll()
             .antMatchers("/api/v2/api-docs", "/api/configuration/ui", "/api/swagger-resources", "/api/configuration/security", "/api/swagger-ui.html", "/api/webjars/**", "/api/swagger-resources/configuration/ui", "/api/swagger-resources/configuration/security").permitAll()
             .antMatchers("/swagger-ui/**","/v3/api-docs/**").permitAll()
             .antMatchers("/api/swagger-ui/**","/api/v3/api-docs/**").permitAll()
             .antMatchers("/api/v3/api-docs", "/api/configuration/ui", "/api/swagger-resources", "/api/configuration/security", "/api/swagger-ui.html", "/api/webjars/**", "/api/swagger-resources/configuration/ui", "/api/swagger-resources/configuration/security").permitAll()
             // Our private endpoints
-            // Our private endpoints
             .antMatchers("/test/**").hasRole("ADMIN")
             .anyRequest().authenticated();
 
         // Add JWT token filter
-        http.addFilterBefore(
-        		filter,
-            UsernamePasswordAuthenticationFilter.class
-        );
+        http.addFilterBefore(authenticationJwtTokenFilter(),UsernamePasswordAuthenticationFilter.class);
     }
+	
 	
 	
 }

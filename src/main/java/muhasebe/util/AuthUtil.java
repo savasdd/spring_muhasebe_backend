@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import muhasebe.custom.Service;
 import muhasebe.dto.MuhKullaniciDto;
+import muhasebe.security.services.UserDetailsImpl;
 
 @Component
 public class AuthUtil {
@@ -16,9 +17,8 @@ public class AuthUtil {
 
 	public MuhKullaniciDto getUser() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String username = authentication.getPrincipal().toString();
-		MuhKullaniciDto kullanici = service.getKullanici().findKullaniciAdi(username);
-		// User customUser = (User) authentication.getPrincipal();
+		UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
+		MuhKullaniciDto kullanici = service.getKullanici().findKullaniciAdi(userDetails.getUsername());
 
 		return kullanici;
 	}
