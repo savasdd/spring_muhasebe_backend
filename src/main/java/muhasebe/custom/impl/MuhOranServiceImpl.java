@@ -1,6 +1,7 @@
 package muhasebe.custom.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
@@ -12,9 +13,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.web.server.ResponseStatusException;
 
 import cz.jirutka.rsql.parser.RSQLParser;
 import cz.jirutka.rsql.parser.ast.Node;
@@ -68,14 +67,18 @@ public class MuhOranServiceImpl implements MuhOranServiceAsync {
 
 	@Override
 	public MuhOranDto updateOran(String id, MuhOran model) throws MUHException {
-		MuhOran exist = repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-		lockEntity(exist);
+		Optional<MuhOran> orans = repository.findById(id);
+		lockEntity(orans.get());
 
-		exist.setAktif(model.getAktif());
-		exist.setOran(model.getOran());
-		exist.setTanim(model.getTanim());
-		exist.setYil(model.getYil());
-		MuhOran oran = repository.save(exist);
+		MuhOran oranToUpdate = orans.map(val -> {
+			val.setAktif(model.getAktif());
+			val.setOran(model.getOran());
+			val.setTanim(model.getTanim());
+			val.setYil(model.getYil());
+			return val;
+		}).orElseThrow(IllegalArgumentException::new);
+
+		MuhOran oran = repository.save(oranToUpdate);
 		log.info("ORAN: =====> " + oran.getOranId() + " güncellendi!");
 		return mapper.map(oran, MuhOranDto.class);
 	}

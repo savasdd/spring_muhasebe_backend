@@ -1,6 +1,7 @@
 package muhasebe.custom.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
@@ -12,9 +13,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.web.server.ResponseStatusException;
 
 import cz.jirutka.rsql.parser.RSQLParser;
 import cz.jirutka.rsql.parser.ast.Node;
@@ -68,14 +67,18 @@ public class MuhRolServiceImpl implements MuhRolServiceAsync {
 
 	@Override
 	public MuhRolDto updateRol(String id, MuhRol model) throws MUHException {
-		MuhRol exist = repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-		lockEntity(exist);
+		Optional<MuhRol> rols = repository.findById(id);
+		lockEntity(rols.get());
 
-		exist.setAciklama(model.getAciklama());
-		exist.setAktif(model.getAktif());
-		exist.setTanim(model.getTanim());
-		exist.setKod(model.getKod());
-		MuhRol rol = repository.save(exist);
+		MuhRol rolToUpdate = rols.map(val -> {
+			val.setAciklama(model.getAciklama());
+			val.setAktif(model.getAktif());
+			val.setTanim(model.getTanim());
+			val.setKod(model.getKod());
+			return val;
+		}).orElseThrow(IllegalArgumentException::new);
+
+		MuhRol rol = repository.save(rolToUpdate);
 		log.info("ROL: =====> " + rol.getRolId() + " güncellendi!");
 		return mapper.map(rol, MuhRolDto.class);
 	}

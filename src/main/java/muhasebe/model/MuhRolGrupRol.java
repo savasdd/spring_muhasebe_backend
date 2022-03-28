@@ -12,8 +12,6 @@ import javax.persistence.Version;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -21,7 +19,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import muhasebe.util.aud.Auditable;
-import muhasebe.util.validation.NotNullValid;
 
 @Builder
 @Getter
@@ -30,40 +27,45 @@ import muhasebe.util.validation.NotNullValid;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "MUH_HESAP")
-public class MuhHesap extends Auditable<String> {
+@Table(name = "MUH_ROL_GRUP_ROL")
+public class MuhRolGrupRol extends Auditable<String> {
 
-	private static MuhHesap instance = null;
+	private static MuhRolGrupRol instance = null;
 
 	@Id
 	@GeneratedValue(generator = "UUID")
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-	@Column(name = "HESAP_ID", updatable = false, nullable = false)
-	private String hesapId;
-
-	@NotNullValid(message = "Tanım alanı boş geçilemez")
-	@Column(name = "TANIM")
-	private String tanim;
-
-	@NotNullValid(message = "Hesap no alanı boş geçilemez")
-	@Column(name = "HESAP_NO")
-	private String hesapNo;
+	@Column(name = "ROL_GRUP_ROL_ID", updatable = false, nullable = false)
+	private String rolGrupRolId;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "KOD_ID", referencedColumnName = "KOD_ID", nullable = true)
-	@JsonIgnoreProperties(value = { "applications", "hibernateLazyInitializer" })
-	private MuhKod kod;
+	@JoinColumn(name = "ROL_GRUP_ID", nullable = false)
+	private MuhRolGrup grup;
 
-	@Column(name = "AKTIF")
-	private Boolean aktif;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ROL_NO", nullable = false)
+	private MuhRol rol;
 
 	@Version
 	@Column(name = "VERSION")
 	private Long version;
 
-	public static MuhHesap getInstance() {
+	@Column(name = "SORGU")
+	private Boolean sorgu;
+
+	@Column(name = "EKLEME")
+	private Boolean ekleme;
+
+	@Column(name = "GUNLEME")
+	private Boolean gunleme;
+
+	@Column(name = "SILME")
+	private Boolean silme;
+
+	public static MuhRolGrupRol getInstance() {
 		if (instance == null)
-			instance = new MuhHesap();
+			instance = new MuhRolGrupRol();
 		return instance;
 	}
+
 }

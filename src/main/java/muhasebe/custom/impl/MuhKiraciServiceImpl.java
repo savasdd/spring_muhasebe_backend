@@ -1,6 +1,7 @@
 package muhasebe.custom.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
@@ -81,20 +82,24 @@ public class MuhKiraciServiceImpl implements MuhKiraciServiceAsync {
 
 	@Override
 	public MuhKiraciDto updateKiraci(String id, MuhKiraci model) throws MUHException {
-		MuhKiraci exist = repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-		lockEntity(exist);
+		Optional<MuhKiraci> kiracis = repository.findById(id);
+		lockEntity(kiracis.get());
 		model.setCinsiyet(
 				model.getCinsiyet().getKodId() != null ? service.getKod().getKod(model.getCinsiyet().getKodId())
 						: null);
 
-		exist.setAd(model.getAd());
-		exist.setSoyad(model.getSoyad());
-		exist.setTckn(model.getTckn());
-		exist.setSicilNo(model.getSicilNo());
-		exist.setDogumTarihi(model.getDogumTarihi());
-		exist.setDogumYeri(model.getDogumYeri());
-		exist.setCinsiyet(model.getCinsiyet());
-		MuhKiraci kiraci = repository.save(exist);
+		MuhKiraci kiraciToUpdate = kiracis.map(val -> {
+			val.setAd(model.getAd());
+			val.setSoyad(model.getSoyad());
+			val.setTckn(model.getTckn());
+			val.setSicilNo(model.getSicilNo());
+			val.setDogumTarihi(model.getDogumTarihi());
+			val.setDogumYeri(model.getDogumYeri());
+			val.setCinsiyet(model.getCinsiyet());
+			return val;
+		}).orElseThrow(IllegalArgumentException::new);
+
+		MuhKiraci kiraci = repository.save(kiraciToUpdate);
 		log.info("KIRACI: =====> " + kiraci.getKiraciId() + " güncellendi!");
 		return mapper.map(kiraci, MuhKiraciDto.class);
 	}

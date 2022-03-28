@@ -36,12 +36,6 @@ public class MuhKullanici extends Auditable<String> {
 
 	private static MuhKullanici instance = null;
 
-	public static MuhKullanici getInstance() {
-		if (instance == null)
-			instance = new MuhKullanici();
-		return instance;
-	}
-
 	@Id
 	@Column(name = "KULLANICI_ID", updatable = false, nullable = false)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "GNL_GEN")
@@ -72,4 +66,9 @@ public class MuhKullanici extends Auditable<String> {
 	@Column(name = "VERSION")
 	private Long version;
 
+	public static MuhKullanici getInstance() {
+		if (instance == null)
+			instance = new MuhKullanici();
+		return instance;
+	}
 }

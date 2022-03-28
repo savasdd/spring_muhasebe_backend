@@ -32,12 +32,6 @@ public class MuhOran extends Auditable<String> {
 
 	private static MuhOran instance = null;
 
-	public static MuhOran getInstance() {
-		if (instance == null)
-			instance = new MuhOran();
-		return instance;
-	}
-
 	@Id
 	@GeneratedValue(generator = "UUID")
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
@@ -62,5 +56,11 @@ public class MuhOran extends Auditable<String> {
 	@Version
 	@Column(name = "VERSION")
 	private Long version;
+
+	public static MuhOran getInstance() {
+		if (instance == null)
+			instance = new MuhOran();
+		return instance;
+	}
 
 }

@@ -40,12 +40,6 @@ public class MuhKiraci extends Auditable<String> {
 
 	private static MuhKiraci instance = null;
 
-	public static MuhKiraci getInstance() {
-		if (instance == null)
-			instance = new MuhKiraci();
-		return instance;
-	}
-
 	@Id
 	@GeneratedValue(generator = "UUID")
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
@@ -87,5 +81,11 @@ public class MuhKiraci extends Auditable<String> {
 	@Version
 	@Column(name = "VERSION")
 	private Long version;
+
+	public static MuhKiraci getInstance() {
+		if (instance == null)
+			instance = new MuhKiraci();
+		return instance;
+	}
 
 }

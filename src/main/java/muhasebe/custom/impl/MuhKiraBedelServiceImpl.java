@@ -1,6 +1,7 @@
 package muhasebe.custom.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
@@ -80,22 +81,25 @@ public class MuhKiraBedelServiceImpl implements MuhKiraBedelServiceAsync {
 
 	@Override
 	public MuhKiraBedelDto updateBedel(String kiraciId, String id, MuhKiraBedel model) throws MUHException {
-		MuhKiraBedel exist = repository.findByKiraci_KiraciIdAndKiraId(kiraciId, id)
-				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-		lockEntity(exist);
+		Optional<MuhKiraBedel> bedels = repository.findByKiraci_KiraciIdAndKiraId(kiraciId, id);
+		lockEntity(bedels.get());
 
 		model.setKiraci(kiraciId != null ? service.getKiraci().getKiraci(kiraciId) : null);
 		model.setFaizOrani(
 				model.getFaizOrani().getOranId() != null ? service.getOran().getOran(model.getFaizOrani().getOranId())
 						: null);
-		exist.setTanim(model.getTanim());
-		exist.setBedel(model.getBedel());
-		exist.setFaizOrani(model.getFaizOrani());
-		exist.setKiraci(model.getKiraci());
-		exist.setKiralamaTarihi(model.getKiralamaTarihi());
-		exist.setKiraSuresi(model.getKiraSuresi());
-		exist.setToplamBedel(model.getToplamBedel());
-		MuhKiraBedel bedel = repository.save(exist);
+		MuhKiraBedel bedelToUpdate = bedels.map(val -> {
+			val.setTanim(model.getTanim());
+			val.setBedel(model.getBedel());
+			val.setFaizOrani(model.getFaizOrani());
+			val.setKiraci(model.getKiraci());
+			val.setKiralamaTarihi(model.getKiralamaTarihi());
+			val.setKiraSuresi(model.getKiraSuresi());
+			val.setToplamBedel(model.getToplamBedel());
+			return val;
+		}).orElseThrow(IllegalArgumentException::new);
+
+		MuhKiraBedel bedel = repository.save(bedelToUpdate);
 		log.info("BEDEL: =====> " + bedel.getKiraId() + " güncellendi!");
 		return mapper.map(bedel, MuhKiraBedelDto.class);
 	}

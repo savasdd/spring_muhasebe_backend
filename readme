@@ -87,4 +87,8 @@ Elasticsearch field ve document özellikleri kullanılırak repository üzerinde
 JasperUtil: datasource yapan, raporu compile eden sonra export eden sınıftır.
 
 
+----------Spring Boot Actuator
+http://localhost:8085/actuator/
+Spring Boot Actuator, uygulamaların production ortamına hazır özellikleri (health check, disk usage, heap dump vs.) otomatik aktifleştirir
+
 

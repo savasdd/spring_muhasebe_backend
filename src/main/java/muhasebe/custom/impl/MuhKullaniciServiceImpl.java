@@ -1,6 +1,7 @@
 package muhasebe.custom.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
@@ -75,15 +76,18 @@ public class MuhKullaniciServiceImpl implements MuhKullaniciServiceAsync {
 
 	@Override
 	public MuhKullaniciDto updateKullanici(Long id, MuhKullanici model) throws MUHException {
-		MuhKullanici exist = repository.findById(id)
-				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-		lockEntity(exist);
+		Optional<MuhKullanici> kullanicis = repository.findById(id);
+		lockEntity(kullanicis.get());
 
-		exist.setAd(model.getAd());
-		exist.setSoyad(model.getSoyad());
-		exist.setTckn(model.getTckn());
-		exist.setKullaniciAdi(model.getKullaniciAdi());
-		MuhKullanici kullanici = repository.save(exist);
+		MuhKullanici kullaniciToUpdate = kullanicis.map(val -> {
+			val.setAd(model.getAd());
+			val.setSoyad(model.getSoyad());
+			val.setTckn(model.getTckn());
+			val.setKullaniciAdi(model.getKullaniciAdi());
+			return val;
+		}).orElseThrow(IllegalArgumentException::new);
+
+		MuhKullanici kullanici = repository.save(kullaniciToUpdate);
 		log.info("KULLANICI: =====> " + kullanici.getKullaniciId() + " güncellendi!");
 		return mapper.map(kullanici, MuhKullaniciDto.class);
 	}

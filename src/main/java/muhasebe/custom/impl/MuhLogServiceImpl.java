@@ -81,14 +81,16 @@ public class MuhLogServiceImpl implements MuhLogServiceAsync {
 
 	@Override
 	public MuhKullaniciLog updateKullanici(String id, MuhKullaniciLog model) throws MUHException {
-		Optional<MuhKullaniciLog> exit = user.findById(id);
-		MuhKullaniciLog dto = exit.get();
-		dto.setKullaniciAdi(model.getKullaniciAdi());
-		dto.setCreateDate(model.getCreateDate());
-		dto.setExpireDate(model.getExpireDate());
+		Optional<MuhKullaniciLog> logs = user.findById(id);
+		MuhKullaniciLog logToUpdate = logs.map(val -> {
+			val.setKullaniciAdi(model.getKullaniciAdi());
+			val.setCreateDate(model.getCreateDate());
+			val.setExpireDate(model.getExpireDate());
+			return val;
+		}).orElseThrow(IllegalArgumentException::new);
 
 		log.info("Update Kullanici Log");
-		return user.save(dto);
+		return user.save(logToUpdate);
 	}
 
 	@Override

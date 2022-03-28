@@ -1,6 +1,7 @@
 package muhasebe.custom.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
@@ -73,16 +74,19 @@ public class MuhKodServiceImpl implements MuhKodServiceAsync {
 
 	@Override
 	public MuhKodDto updateKod(String id, MuhKod model) throws MUHException {
-		MuhKod exist = repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-		lockEntity(exist);
+		Optional<MuhKod> kods = repository.findById(id);
+		lockEntity(kods.get());
 
-		exist.setKodId(exist.getKodId());
-		exist.setUstKod(model.getUstKod());
-		exist.setAciklama(model.getAciklama());
-		exist.setKod(model.getKod());
-		exist.setSiraNo(model.getSiraNo());
-		exist.setTanim(model.getTanim());
-		MuhKod kod = repository.save(exist);
+		MuhKod kodToUpdate = kods.map(val -> {
+			val.setUstKod(model.getUstKod());
+			val.setAciklama(model.getAciklama());
+			val.setKod(model.getKod());
+			val.setSiraNo(model.getSiraNo());
+			val.setTanim(model.getTanim());
+			return val;
+		}).orElseThrow(IllegalArgumentException::new);
+
+		MuhKod kod = repository.save(kodToUpdate);
 		log.info("KOD: =====> " + kod.getKodId() + " güncellendi!");
 		return mapper.map(kod, MuhKodDto.class);
 	}

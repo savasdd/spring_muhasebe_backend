@@ -2,8 +2,11 @@ package muhasebe.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Version;
 
@@ -16,7 +19,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import muhasebe.util.aud.Auditable;
-import muhasebe.util.validation.NotNullValid;
 
 @Builder
 @Getter
@@ -25,38 +27,32 @@ import muhasebe.util.validation.NotNullValid;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "MUH_ROL")
-public class MuhRol extends Auditable<String> {
+@Table(name = "MUH_ROL_GRUP_KULLANICI")
+public class MuhRolGrupKullanici extends Auditable<String> {
 
-	private static MuhRol instance = null;
+	private static MuhRolGrupKullanici instance = null;
 
 	@Id
 	@GeneratedValue(generator = "UUID")
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-	@Column(name = "ROL_ID", updatable = false, nullable = false)
-	private String rolId;
+	@Column(name = "ROL_GRUP_ROL_ID", updatable = false, nullable = false)
+	private String rolGrupKullaniciId;
 
-	@NotNullValid(message = "Tanım alanı boş geçilemez")
-	@Column(name = "TANIM")
-	private String tanim;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ROL_GRUP_ID", nullable = false)
+	private MuhRolGrup grup;
 
-	@NotNullValid(message = "Kod alanı boş geçilemez")
-	@Column(name = "KOD")
-	private String kod;
-
-	@Column(name = "ACIKLAMA")
-	private String aciklama;
-
-	@Column(name = "AKTIF")
-	private Boolean aktif;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "KULLANICI_ID", nullable = false)
+	private MuhKullanici kullanici;
 
 	@Version
 	@Column(name = "VERSION")
 	private Long version;
 
-	public static MuhRol getInstance() {
+	public static MuhRolGrupKullanici getInstance() {
 		if (instance == null)
-			instance = new MuhRol();
+			instance = new MuhRolGrupKullanici();
 		return instance;
 	}
 

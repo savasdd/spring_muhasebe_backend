@@ -1,6 +1,7 @@
 package muhasebe.custom.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.LockModeType;
@@ -82,17 +83,19 @@ public class MuhHesapServiceImpl implements MuhHesapServiceAsync {
 
 	@Override
 	public MuhHesapDto updateHesap(String id, MuhHesap model) throws MUHException {
-		MuhHesap exist = repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-		lockEntity(exist);
-		
-		System.err.println(model.toString());
-
+		Optional<MuhHesap> hesaps = repository.findById(id);
+		lockEntity(hesaps.get());
 		model.setKod(model.getKod().getKodId() != null ? service.getKod().getKod(model.getKod().getKodId()) : null);
-		exist.setKod(model.getKod());
-		exist.setAktif(model.getAktif());
-		exist.setHesapNo(model.getHesapNo());
-		exist.setTanim(model.getTanim());
-		MuhHesap hesap = repository.save(exist);
+
+		MuhHesap hesapToUpdate = hesaps.map(val -> {
+			val.setKod(model.getKod());
+			val.setAktif(model.getAktif());
+			val.setHesapNo(model.getHesapNo());
+			val.setTanim(model.getTanim());
+			return val;
+		}).orElseThrow(IllegalArgumentException::new);
+
+		MuhHesap hesap = repository.save(hesapToUpdate);
 		log.info("HESAP: =====> " + hesap.getHesapId() + " güncellendi!");
 		return mapper.map(hesap, MuhHesapDto.class);
 	}

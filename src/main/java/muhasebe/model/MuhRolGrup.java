@@ -16,7 +16,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import muhasebe.util.aud.Auditable;
-import muhasebe.util.validation.NotNullValid;
 
 @Builder
 @Getter
@@ -25,24 +24,19 @@ import muhasebe.util.validation.NotNullValid;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "MUH_ROL")
-public class MuhRol extends Auditable<String> {
+@Table(name = "MUH_ROL_GRUP")
+public class MuhRolGrup extends Auditable<String> {
 
-	private static MuhRol instance = null;
+	private static MuhRolGrup instance = null;
 
 	@Id
 	@GeneratedValue(generator = "UUID")
 	@GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-	@Column(name = "ROL_ID", updatable = false, nullable = false)
-	private String rolId;
+	@Column(name = "ROL_GRUP_ID", updatable = false, nullable = false)
+	private String rolGrupId;
 
-	@NotNullValid(message = "Tanım alanı boş geçilemez")
-	@Column(name = "TANIM")
-	private String tanim;
-
-	@NotNullValid(message = "Kod alanı boş geçilemez")
-	@Column(name = "KOD")
-	private String kod;
+	@Column(name = "GRUP_AD")
+	private String grupAd;
 
 	@Column(name = "ACIKLAMA")
 	private String aciklama;
@@ -54,9 +48,9 @@ public class MuhRol extends Auditable<String> {
 	@Column(name = "VERSION")
 	private Long version;
 
-	public static MuhRol getInstance() {
+	public static MuhRolGrup getInstance() {
 		if (instance == null)
-			instance = new MuhRol();
+			instance = new MuhRolGrup();
 		return instance;
 	}
 
